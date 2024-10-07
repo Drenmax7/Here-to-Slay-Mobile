@@ -1,18 +1,29 @@
 package com.example.jeudecarte.HereToSlay.network;
 
 
+import android.content.Context;
+import android.net.wifi.WifiManager;
+import android.text.format.Formatter;
 import android.util.Log;
 
 import com.example.jeudecarte.HereToSlay.controller.Controller;
 import com.example.jeudecarte.HereToSlay.controller.HubController;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.HttpURLConnection;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -85,6 +96,7 @@ public class Server {
     public void run() {
         Log.d("affichage debug","ici");
         try (ServerSocket serverSocket = new ServerSocket(port)) {
+//            Log.d("affichage debug",getIPAddress(true));
 
             this.serverSocket = serverSocket;
             close = false;
@@ -100,12 +112,13 @@ public class Server {
 
                     UUID playerUUID = UUID.randomUUID();
 
-                    Packet packet = new Packet("uuid");
-                    packet.playerUUID = playerUUID;
-                    sendDataByUUID(packet, playerUUID);
-
                     connectedClient.put(playerUUID,socket);
                     clientOutput.put(playerUUID,output);
+
+                    Packet packet = new Packet("uuid");
+                    packet.playerUUID = playerUUID;
+//                    packet.host = getIPAddress(true);
+                    sendDataByUUID(packet, playerUUID);
 
                     new Thread(() -> listen(socket,input,playerUUID)).start();
 

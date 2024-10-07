@@ -19,6 +19,8 @@ import com.example.jeudecarte.HereToSlay.network.Server;
 import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.HereToSlayParameterBinding;
 
+import java.util.ArrayList;
+
 public class Parameter extends Activity {
     private String INFINI = "+∞";
 
@@ -380,18 +382,31 @@ public class Parameter extends Activity {
             Settings.forcedReroll = Integer.parseInt(binding.forcedRerollEditText.getText().toString());
 
             // create the server
-            Server server = new Server(666);
-            server.run();
+            Server server = new Server(6666);
+            new Thread(server::run).start();
             server.controller = new HubController(server);
 
             //connect to server
-            Client client = new Client("localhost",666);
-            if (client.connexion()) {
+            Client client = new Client("localhost",6666);
+
+            ArrayList<Boolean> state = new ArrayList<>();
+            Thread thread = new Thread(() -> client.connexion(state));
+            thread.start();
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+            if (state.get(0)) {
                 Hub.client = client;
 
                 //load hub view
                 Intent intent = new Intent(this, Hub.class);
                 startActivity(intent);
+            }
+            else {
+                server.stop();
             }
         });
     }

@@ -1,0 +1,6 @@
+server send "uuid" to client
+client transmit the packet when view is set
+hub send "name"
+controller send "player list"
+hub send "player list received"
+controller send "new player"

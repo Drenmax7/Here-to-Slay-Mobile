@@ -1,14 +1,18 @@
 package com.example.jeudecarte.HereToSlay.network;
 
 import android.app.Activity;
+import android.util.Log;
 
 import com.example.jeudecarte.HereToSlay.view.View;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 import java.util.UUID;
 
 /**
@@ -24,7 +28,7 @@ public class Client {
     /**
      * The view onto which the data will be displayed
      */
-    public View view;
+    public View view = null;
 
     /**
      * The state of the connexion
@@ -75,28 +79,34 @@ public class Client {
     /**
      * Create a new connexion with the server
      *
-     * @return if the connexion has been successful or not
+     * return in the argument if the connexion has been successful
      */
-    public boolean connexion(){
+    public void connexion(ArrayList<Boolean> etat){
         try {
-            Socket socket = new Socket(hostname, port);
-            System.out.println("Connected to server " + hostname);
-            this.socket = socket;
+            //timeout the connexion after 3s
+            Log.d("affichage debug",hostname);
+            Socket socket = new Socket();
+            socket.connect(new InetSocketAddress(hostname, port), 3000);
 
+            this.socket = socket;
             this.output = new ObjectOutputStream(socket.getOutputStream());
 
             ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
             new Thread(() -> listen(input)).start();
 
-            return true;
+            etat.add(true);
+            return;
+        }
+        catch (SocketTimeoutException exception){
+            Log.d("affichage debug","Connexion expired. Invalid address or the server is not reachable");
         }
         catch (UnknownHostException exception) {
-            System.out.println("Server not found: " + exception.getMessage());
+            Log.d("affichage debug","Server not found: " + exception.getMessage());
         }
         catch (IOException exception) {
-            System.out.println("I/O error: " + exception.getMessage());
+            Log.d("affichage debug","I/O error: " + exception.getMessage());
         }
-        return false;
+        etat.add(false);
     }
 
     /**
@@ -131,6 +141,8 @@ public class Client {
                 }
                 else if (packet.name.equals("uuid")){
                     playerUUID = packet.playerUUID;
+                    //eventually get a view when an other thread change the view
+                    while (view == null){}
                     view.dataTreatment(packet);
                 }
                 else{

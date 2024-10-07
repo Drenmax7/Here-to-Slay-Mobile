@@ -17,6 +17,7 @@ public class Packet implements Serializable {
     public String playerName;
     public UUID playerUUID;
     public ArrayList<Player> playerList;
+    public String host;
 
     public Packet(String name){
         this.name = name;
