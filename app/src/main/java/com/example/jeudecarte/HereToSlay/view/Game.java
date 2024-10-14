@@ -5,9 +5,7 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.example.jeudecarte.HereToSlay.network.Client;
-import com.example.jeudecarte.HereToSlay.network.Packet;
 import com.example.jeudecarte.databinding.HereToSlayGameBinding;
-import com.example.jeudecarte.databinding.HereToSlayHubBinding;
 
 import org.json.JSONObject;
 

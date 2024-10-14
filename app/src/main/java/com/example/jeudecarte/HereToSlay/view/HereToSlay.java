@@ -1,4 +1,4 @@
-package com.example.jeudecarte.HereToSlay;
+package com.example.jeudecarte.HereToSlay.view;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -8,10 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 
+import com.example.jeudecarte.HereToSlay.Settings;
+import com.example.jeudecarte.HereToSlay.Utility;
 import com.example.jeudecarte.HereToSlay.network.Client;
-import com.example.jeudecarte.HereToSlay.view.Hub;
-import com.example.jeudecarte.HereToSlay.view.Parameter;
-import com.example.jeudecarte.HereToSlay.view.SelfParameter;
 import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.HereToSlayHomeBinding;
 

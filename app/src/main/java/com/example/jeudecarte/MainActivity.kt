@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import com.example.jeudecarte.Bataille.Bataille
-import com.example.jeudecarte.HereToSlay.HereToSlay
+import com.example.jeudecarte.HereToSlay.view.HereToSlay
 import com.example.jeudecarte.databinding.GameListBinding
 
 class MainActivity : Activity() {

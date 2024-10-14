@@ -43,28 +43,28 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".HereToSlay.HereToSlay"
+            android:name=".HereToSlay.view.HereToSlay"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".HereToSlay.view.SelfParameter"
-            android:parentActivityName=".HereToSlay.HereToSlay"
+            android:parentActivityName=".HereToSlay.view.HereToSlay"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".HereToSlay.view.Parameter"
-            android:parentActivityName=".HereToSlay.HereToSlay"
+            android:parentActivityName=".HereToSlay.view.HereToSlay"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".HereToSlay.view.Hub"
-            android:parentActivityName=".HereToSlay.HereToSlay"
+            android:parentActivityName=".HereToSlay.view.HereToSlay"
             android:screenOrientation="landscape">
         </activity>
         <activity
             android:name=".HereToSlay.view.Game"
-            android:parentActivityName=".HereToSlay.HereToSlay"
+            android:parentActivityName=".HereToSlay.view.HereToSlay"
             android:screenOrientation="landscape">
         </activity>
     </application>
