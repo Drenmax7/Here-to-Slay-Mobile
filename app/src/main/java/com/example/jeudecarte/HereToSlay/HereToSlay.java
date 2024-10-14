@@ -16,6 +16,7 @@ import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.HereToSlayHomeBinding;
 
 public class HereToSlay extends Activity {
+    //Attributes
 
     /**
      * The start of all tags of the application
@@ -32,6 +33,9 @@ public class HereToSlay extends Activity {
      */
     private HereToSlayHomeBinding binding;
 
+
+    //Methods
+
     /**
      * Function launched when activity is started
      * Initialize buttons and textViews
@@ -47,6 +51,9 @@ public class HereToSlay extends Activity {
 
         binding = HereToSlayHomeBinding.inflate(this.getLayoutInflater());
         setContentView(binding.getRoot());
+
+        //initialize a list with all heroes names
+        Utility.setNameList(getAssets());
 
         getName();
         getLanguage();

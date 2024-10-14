@@ -1,21 +1,18 @@
 package com.example.jeudecarte.HereToSlay.view;
 
-import static com.example.jeudecarte.HereToSlay.Utilitary.generateJson;
+import static com.example.jeudecarte.HereToSlay.Utility.generateJson;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.ParcelUuid;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.jeudecarte.HereToSlay.Settings;
 import com.example.jeudecarte.HereToSlay.board.Player;
-import com.example.jeudecarte.HereToSlay.controller.Controller;
 import com.example.jeudecarte.HereToSlay.controller.HubController;
 import com.example.jeudecarte.HereToSlay.network.Client;
 import com.example.jeudecarte.HereToSlay.network.NsdServiceDiffuser;
-import com.example.jeudecarte.HereToSlay.network.Packet;
 import com.example.jeudecarte.databinding.HereToSlayHubBinding;
 
 import org.json.JSONArray;

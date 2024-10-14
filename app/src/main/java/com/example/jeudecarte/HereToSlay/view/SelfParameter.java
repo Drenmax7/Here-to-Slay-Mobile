@@ -1,5 +1,7 @@
 package com.example.jeudecarte.HereToSlay.view;
 
+import static com.example.jeudecarte.HereToSlay.Utility.getRandomName;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -22,7 +24,6 @@ public class SelfParameter extends Activity {
     @SuppressLint("StaticFieldLeak")
     private HereToSlaySelfParameterBinding binding;
 
-    public static ArrayList<String> nameList;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,7 @@ public class SelfParameter extends Activity {
 
     private void setName(){
         if (Settings.name.isEmpty()){
-            Settings.name = getRandomName(getAssets());
+            Settings.name = getRandomName();
         }
 
         binding.nameEditText.setText(Settings.name);
@@ -48,7 +49,7 @@ public class SelfParameter extends Activity {
 
     private void setRandomName(){
         binding.randomNameButton.setOnClickListener(v -> {
-            binding.nameEditText.setText(getRandomName(getAssets()));
+            binding.nameEditText.setText(getRandomName());
         });
     }
 
@@ -69,48 +70,9 @@ public class SelfParameter extends Activity {
 
     private void setReset(){
         binding.resetButton.setOnClickListener(v -> {
-            binding.nameEditText.setText(getRandomName(getAssets()));
+            binding.nameEditText.setText(getRandomName());
             binding.languageSpinner.setSelection(0);
         });
-    }
-
-    public static String getRandomName(AssetManager assetManager){
-        //getAssets();
-
-        if (nameList == null) {
-            nameList = new ArrayList<>();
-            String[] classes = new String[]{
-                    "bard",
-                    "berserker",
-                    "druid",
-                    "fighter",
-                    "guardian",
-                    "necromancer",
-                    "ranger",
-                    "sorcerer",
-                    "thief",
-                    "warrior",
-                    "wizard",
-                    "leader",
-                    "monster"
-            };
-            try {
-                for (String oneClass : classes){
-                    String [] names = assetManager.list("cards_here_to_slay/" + oneClass);
-                    nameList.addAll(Arrays.asList(names));
-                }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            for (int i = 0; i < nameList.size(); i++){
-                String name = nameList.get(i);
-                nameList.set(i,name.substring(0,name.length()-4));
-            }
-        }
-
-        Random rand = new Random();
-        return nameList.get(rand.nextInt(nameList.size()));
     }
 
     private void setLanguage(){

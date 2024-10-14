@@ -1,21 +1,17 @@
 package com.example.jeudecarte.HereToSlay.controller;
 
-import static com.example.jeudecarte.HereToSlay.Utilitary.generateJson;
+import static com.example.jeudecarte.HereToSlay.Utility.generateJson;
 
 import android.util.Log;
 
 import com.example.jeudecarte.HereToSlay.board.Player;
 import com.example.jeudecarte.HereToSlay.network.Client;
-import com.example.jeudecarte.HereToSlay.network.Packet;
-import com.example.jeudecarte.HereToSlay.network.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.UUID;
 
 public class HubController implements Controller{
     private Client server;
