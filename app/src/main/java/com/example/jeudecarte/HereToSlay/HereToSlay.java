@@ -8,8 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
 
-import androidx.annotation.NonNull;
-
 import com.example.jeudecarte.HereToSlay.network.Client;
 import com.example.jeudecarte.HereToSlay.view.Hub;
 import com.example.jeudecarte.HereToSlay.view.Parameter;
@@ -18,10 +16,16 @@ import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.HereToSlayHomeBinding;
 
 public class HereToSlay extends Activity {
+
+    /**
+     * The start of all tags of the application
+     */
+    public static final String GENERIC = "debug message ";
+    
     /**
      * The tag showed in the logcat console
      */
-    private static final String TAG = "affichage debug HERETOSLAY";
+    private static final String TAG = GENERIC + "HERE_TO_SLAY";
 
     /**
      * The variable that list all id of the xml file
@@ -93,8 +97,7 @@ public class HereToSlay extends Activity {
      */
     private void setJoin(){
         binding.joinGame.setOnClickListener(v -> {
-            Log.d(TAG,"rentre dans la fonction");
-
+            Log.d(TAG,"enter the function");
 
             // create an edittext to enter host code
             EditText hostAddress = new EditText(binding.joinGame.getContext());
@@ -125,7 +128,7 @@ public class HereToSlay extends Activity {
 
         // login button
         dialogBuilder.setPositiveButton("Login", (dialog, which) -> {
-            String enteredCode = hostAddress.getText().toString();
+            //String enteredCode = hostAddress.getText().toString();
 
             Client client = new Client("10.0.2.2",6666);
             new Thread(client::connexion).start();
