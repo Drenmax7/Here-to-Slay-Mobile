@@ -1,0 +1,2053 @@
+{
+    "S": {
+        "back": {
+            "Classes": {
+                "path": "back/S_1_Classes.png",
+                "number": 1
+            },
+            "Leader Back": {
+                "path": "back/S_1_Leader Back.png",
+                "number": 1
+            },
+            "Monster Back": {
+                "path": "back/S_1_Monster Back.png",
+                "number": 1
+            },
+            "Normal Back": {
+                "path": "back/S_1_Normal Back.png",
+                "number": 1
+            },
+            "Rules": {
+                "path": "back/S_1_Rules.png",
+                "number": 1
+            }
+        }
+    },
+    "N": {
+        "hero": {
+            "Dodgy Dealer": {
+                "path": "bard/N_1_Dodgy Dealer.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Fuzzy Cheeks": {
+                "path": "bard/N_1_Fuzzy Cheeks.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Greedy Cheeks": {
+                "path": "bard/N_1_Greedy Cheeks.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Hamlet": {
+                "path": "bard/N_1_Hamlet.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Lucky Bucky": {
+                "path": "bard/N_1_Lucky Bucky.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Mellow Dee": {
+                "path": "bard/N_1_Mellow Dee.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Napping Nibbles": {
+                "path": "bard/N_1_Napping Nibbles.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Peanut": {
+                "path": "bard/N_1_Peanut.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Tipsy Tootie": {
+                "path": "bard/N_1_Tipsy Tootie.png",
+                "number": 1,
+                "class": "bard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Bad Axe": {
+                "path": "fighter/N_1_Bad Axe.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Bear Claw": {
+                "path": "fighter/N_1_Bear Claw.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Bearserker": {
+                "path": "fighter/N_1_Bearserker.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Beary Wise": {
+                "path": "fighter/N_1_Beary Wise.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Fury Knuckle": {
+                "path": "fighter/N_1_Fury Knuckle.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Heavy Bear": {
+                "path": "fighter/N_1_Heavy Bear.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Pan Chucks": {
+                "path": "fighter/N_1_Pan Chucks.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Qi Bear": {
+                "path": "fighter/N_1_Qi Bear.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Tough Teddy": {
+                "path": "fighter/N_1_Tough Teddy.png",
+                "number": 1,
+                "class": "fighter",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Calming Voice": {
+                "path": "guardian/N_1_Calming Voice.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Complex Illusion": {
+                "path": "guardian/N_1_Complex Illusion.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Guiding Light": {
+                "path": "guardian/N_1_Guiding Light.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Holy Curselifter": {
+                "path": "guardian/N_1_Holy Curselifter.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Iron Resolve": {
+                "path": "guardian/N_1_Iron Resolve.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Mighty Blade": {
+                "path": "guardian/N_1_Mighty Blade.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Radiant Horn": {
+                "path": "guardian/N_1_Radiant Horn.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Vibrant Glow": {
+                "path": "guardian/N_1_Vibrant Glow.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Wise Shield": {
+                "path": "guardian/N_1_Wise Shield.png",
+                "number": 1,
+                "class": "guardian",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Bullseye": {
+                "path": "ranger/N_1_Bullseye.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Hoodwink": {
+                "path": "ranger/N_1_Hoodwink.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Hook": {
+                "path": "ranger/N_1_Hook.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Lookie Rookie": {
+                "path": "ranger/N_1_Lookie Rookie.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Quick Draw": {
+                "path": "ranger/N_1_Quick Draw.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Serious Grey": {
+                "path": "ranger/N_1_Serious Grey.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Sharp Fox": {
+                "path": "ranger/N_1_Sharp Fox.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Wildshot": {
+                "path": "ranger/N_1_Wildshot.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Wily Red": {
+                "path": "ranger/N_1_Wily Red.png",
+                "number": 1,
+                "class": "ranger",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Kit Napper": {
+                "path": "thief/N_1_Kit Napper.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Meowzio": {
+                "path": "thief/N_1_Meowzio.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Plundering Puma": {
+                "path": "thief/N_1_Plundering Puma.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Purring Bandit": {
+                "path": "thief/N_1_Purring Bandit.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Shurikitty": {
+                "path": "thief/N_1_Shurikitty.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Silent Shadow": {
+                "path": "thief/N_1_Silent Shadow.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Slippery Paws": {
+                "path": "thief/N_1_Slippery Paws.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Sly Pickings": {
+                "path": "thief/N_1_Sly Pickings.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Smooth Mimimeow": {
+                "path": "thief/N_1_Smooth Mimimeow.png",
+                "number": 1,
+                "class": "thief",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Bun Bun": {
+                "path": "wizard/N_1_Bun Bun.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Buttons": {
+                "path": "wizard/N_1_Buttons.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Fluffy": {
+                "path": "wizard/N_1_Fluffy.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Hopper": {
+                "path": "wizard/N_1_Hopper.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Mimi": {
+                "path": "wizard/N_1_Mimi.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Snowball": {
+                "path": "wizard/N_1_Snowball.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Spooky": {
+                "path": "wizard/N_1_Spooky.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Whiskers": {
+                "path": "wizard/N_1_Whiskers.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Wiggles": {
+                "path": "wizard/N_1_Wiggles.png",
+                "number": 1,
+                "class": "wizard",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            }
+        },
+        "challenge": {
+            "Bard Challenge": {
+                "path": "challenge/N_1_Bard Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Berserker Challenge": {
+                "path": "challenge/N_1_Berserker Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Challenge": {
+                "path": "challenge/N_1_Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Druid Challenge": {
+                "path": "challenge/N_1_Druid Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Fighter Challenge": {
+                "path": "challenge/N_1_Fighter Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Guardian Challenge": {
+                "path": "challenge/N_1_Guardian Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Necromancer Challenge": {
+                "path": "challenge/N_1_Necromancer Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Ranger Challenge": {
+                "path": "challenge/N_1_Ranger Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Sorcerer Challenge": {
+                "path": "challenge/N_1_Sorcerer Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Thief Challenge": {
+                "path": "challenge/N_1_Thief Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Warrior Challenge": {
+                "path": "challenge/N_1_Warrior Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Wizard Challenge": {
+                "path": "challenge/N_1_Wizard Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            }
+        },
+        "cursed": {
+            "Curse Of The Snake\u2019s Eyes": {
+                "path": "cursed/N_1_Curse Of The Snake\u2019s Eyes.png",
+                "number": 1,
+                "effect": []
+            },
+            "Cursed Glove": {
+                "path": "cursed/N_1_Cursed Glove.png",
+                "number": 1,
+                "effect": []
+            },
+            "Dragon\u2019s Bile": {
+                "path": "cursed/N_1_Dragon\u2019s Bile.png",
+                "number": 1,
+                "effect": []
+            },
+            "Mask Of Misfortune": {
+                "path": "cursed/N_1_Mask Of Misfortune.png",
+                "number": 1,
+                "effect": []
+            },
+            "Sealing Key": {
+                "path": "cursed/N_1_Sealing Key.png",
+                "number": 1,
+                "effect": []
+            },
+            "Soul Tether": {
+                "path": "cursed/N_1_Soul Tether.png",
+                "number": 1,
+                "effect": []
+            },
+            "Soulbound Grimoire": {
+                "path": "cursed/N_1_Soulbound Grimoire.png",
+                "number": 1,
+                "effect": []
+            },
+            "Suspiciously Shiny Coin": {
+                "path": "cursed/N_1_Suspiciously Shiny Coin.png",
+                "number": 1,
+                "effect": []
+            }
+        },
+        "item": {
+            "Biggest Ring Ever": {
+                "path": "item/N_1_Biggest Ring Ever.png",
+                "number": 1,
+                "effect": []
+            },
+            "Bottomless Bag": {
+                "path": "item/N_1_Bottomless Bag.png",
+                "number": 1,
+                "effect": []
+            },
+            "Decoy Doll": {
+                "path": "item/N_1_Decoy Doll.png",
+                "number": 1,
+                "effect": []
+            },
+            "Even Bigger Ring": {
+                "path": "item/N_1_Even Bigger Ring.png",
+                "number": 1,
+                "effect": []
+            },
+            "Goblet Of Caffeination": {
+                "path": "item/N_1_Goblet Of Caffeination.png",
+                "number": 1,
+                "effect": []
+            },
+            "Mysterious Feather": {
+                "path": "item/N_1_Mysterious Feather.png",
+                "number": 1,
+                "effect": []
+            },
+            "Particularly Rusty Coin": {
+                "path": "item/N_1_Particularly Rusty Coin.png",
+                "number": 1,
+                "effect": []
+            },
+            "Really Big Ring": {
+                "path": "item/N_1_Really Big Ring.png",
+                "number": 1,
+                "effect": []
+            },
+            "Silver Lining": {
+                "path": "item/N_1_Silver Lining.png",
+                "number": 1,
+                "effect": []
+            },
+            "Temporal Hourglass": {
+                "path": "item/N_1_Temporal Hourglass.png",
+                "number": 1,
+                "effect": []
+            }
+        },
+        "leader": {
+            "The Brutal Bow": {
+                "path": "leader/N_1_The Brutal Bow.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Charismatic Song": {
+                "path": "leader/N_1_The Charismatic Song.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Cloaked Sage": {
+                "path": "leader/N_1_The Cloaked Sage.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Divine Arrow": {
+                "path": "leader/N_1_The Divine Arrow.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Fearless Flame": {
+                "path": "leader/N_1_The Fearless Flame.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Fierce Panguardian": {
+                "path": "leader/N_1_The Fierce Panguardian.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Fist Of Reason": {
+                "path": "leader/N_1_The Fist Of Reason.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Gnawing Dread": {
+                "path": "leader/N_1_The Gnawing Dread.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Illusive Trickster": {
+                "path": "leader/N_1_The Illusive Trickster.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Mystical Maestro": {
+                "path": "leader/N_1_The Mystical Maestro.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Noble Shaman": {
+                "path": "leader/N_1_The Noble Shaman.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Piercing Howl": {
+                "path": "leader/N_1_The Piercing Howl.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Protecting Horn": {
+                "path": "leader/N_1_The Protecting Horn.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Raging Manticore": {
+                "path": "leader/N_1_The Raging Manticore.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Rhythmic Archer": {
+                "path": "leader/N_1_The Rhythmic Archer.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Shadow Claw": {
+                "path": "leader/N_1_The Shadow Claw.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Unstable Unicorn": {
+                "path": "leader/N_1_The Unstable Unicorn.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Veiled Raider": {
+                "path": "leader/N_1_The Veiled Raider.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            }
+        },
+        "magic": {
+            "Beast Call": {
+                "path": "magic/N_1_Beast Call.png",
+                "number": 1
+            },
+            "Call To The Fallen": {
+                "path": "magic/N_1_Call To The Fallen.png",
+                "number": 1
+            },
+            "Captivating Spell": {
+                "path": "magic/N_1_Captivating Spell.png",
+                "number": 1
+            },
+            "Critical Boost": {
+                "path": "magic/N_1_Critical Boost.png",
+                "number": 1
+            },
+            "Destructive Spell": {
+                "path": "magic/N_1_Destructive Spell.png",
+                "number": 1
+            },
+            "Egg Of Fortune": {
+                "path": "magic/N_1_Egg Of Fortune.png",
+                "number": 1
+            },
+            "Enchanted Spell": {
+                "path": "magic/N_1_Enchanted Spell.png",
+                "number": 1
+            },
+            "Entangling Trap": {
+                "path": "magic/N_1_Entangling Trap.png",
+                "number": 1
+            },
+            "Forced Exchange": {
+                "path": "magic/N_1_Forced Exchange.png",
+                "number": 1
+            },
+            "Forceful Winds": {
+                "path": "magic/N_1_Forceful Winds.png",
+                "number": 1
+            },
+            "Lightning Labrys": {
+                "path": "magic/N_1_Lightning Labrys.png",
+                "number": 1
+            },
+            "Mass Sacrifice": {
+                "path": "magic/N_1_Mass Sacrifice.png",
+                "number": 1
+            },
+            "Rapid Refresh": {
+                "path": "magic/N_1_Rapid Refresh.png",
+                "number": 1
+            },
+            "Winds Of Change": {
+                "path": "magic/N_1_Winds Of Change.png",
+                "number": 1
+            }
+        },
+        "mask": {
+            "Bard Mask": {
+                "path": "mask/N_1_Bard Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Berserker Mask": {
+                "path": "mask/N_1_Berserker Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Druid Mask": {
+                "path": "mask/N_1_Druid Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Fighter Mask": {
+                "path": "mask/N_1_Fighter Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Guardian Mask": {
+                "path": "mask/N_1_Guardian Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Necromancer Mask": {
+                "path": "mask/N_1_Necromancer Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Ranger Mask": {
+                "path": "mask/N_1_Ranger Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Sorcerer Mask": {
+                "path": "mask/N_1_Sorcerer Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Thief Mask": {
+                "path": "mask/N_1_Thief Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Warrior Mask": {
+                "path": "mask/N_1_Warrior Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Wizard Mask": {
+                "path": "mask/N_1_Wizard Mask.png",
+                "number": 1,
+                "class": ""
+            }
+        },
+        "modifier": {
+            "Modifier +1 -1": {
+                "path": "modifier/N_1_Modifier +1 -1.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +1 -3": {
+                "path": "modifier/N_1_Modifier +1 -3.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +1 -4": {
+                "path": "modifier/N_1_Modifier +1 -4.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +2 -1": {
+                "path": "modifier/N_1_Modifier +2 -1.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +2 -2 bis": {
+                "path": "modifier/N_1_Modifier +2 -2 bis.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +2 -2": {
+                "path": "modifier/N_1_Modifier +2 -2.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +2 -3": {
+                "path": "modifier/N_1_Modifier +2 -3.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +3 -1": {
+                "path": "modifier/N_1_Modifier +3 -1.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +3 -2": {
+                "path": "modifier/N_1_Modifier +3 -2.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +4 -1": {
+                "path": "modifier/N_1_Modifier +4 -1.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +4 bis": {
+                "path": "modifier/N_1_Modifier +4 bis.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +4": {
+                "path": "modifier/N_1_Modifier +4.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +6": {
+                "path": "modifier/N_1_Modifier +6.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +7": {
+                "path": "modifier/N_1_Modifier +7.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier -4 bis": {
+                "path": "modifier/N_1_Modifier -4 bis.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier -4": {
+                "path": "modifier/N_1_Modifier -4.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier -6": {
+                "path": "modifier/N_1_Modifier -6.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            }
+        },
+        "monster": {
+            "Abyss Queen": {
+                "path": "monster/N_1_Abyss Queen.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Ancient Megashark": {
+                "path": "monster/N_1_Ancient Megashark.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Anuran Cauldron": {
+                "path": "monster/N_1_Anuran Cauldron.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Arctic Aries": {
+                "path": "monster/N_1_Arctic Aries.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Bloodwing": {
+                "path": "monster/N_1_Bloodwing.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Calamity Mongrel": {
+                "path": "monster/N_1_Calamity Mongrel.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Clawed Nightmare": {
+                "path": "monster/N_1_Clawed Nightmare.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Corrupted Sabretooth": {
+                "path": "monster/N_1_Corrupted Sabretooth.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Crowned Serpent": {
+                "path": "monster/N_1_Crowned Serpent.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Dark Dragon King": {
+                "path": "monster/N_1_Dark Dragon King.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Doombringer": {
+                "path": "monster/N_1_Doombringer.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Dracos": {
+                "path": "monster/N_1_Dracos.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Dragon Wasp": {
+                "path": "monster/N_1_Dragon Wasp.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Feral Dragon": {
+                "path": "monster/N_1_Feral Dragon.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Goretelodont": {
+                "path": "monster/N_1_Goretelodont.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Lumbering Demon": {
+                "path": "monster/N_1_Lumbering Demon.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Malamammoth": {
+                "path": "monster/N_1_Malamammoth.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Mega Slime": {
+                "path": "monster/N_1_Mega Slime.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Muscipula Rex": {
+                "path": "monster/N_1_Muscipula Rex.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Orthus": {
+                "path": "monster/N_1_Orthus.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Possessed Plush": {
+                "path": "monster/N_1_Possessed Plush.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Reef Ripper": {
+                "path": "monster/N_1_Reef Ripper.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Reptilian Ripper": {
+                "path": "monster/N_1_Reptilian Ripper.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Rex Major": {
+                "path": "monster/N_1_Rex Major.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Saffyre Phoenix": {
+                "path": "monster/N_1_Saffyre Phoenix.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Scavenger Griffin": {
+                "path": "monster/N_1_Scavenger Griffin.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Terratuga": {
+                "path": "monster/N_1_Terratuga.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Titan Wyvern": {
+                "path": "monster/N_1_Titan Wyvern.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Venomous Gemini": {
+                "path": "monster/N_1_Venomous Gemini.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Voltclaw Lion": {
+                "path": "monster/N_1_Voltclaw Lion.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Wandering Behemoth": {
+                "path": "monster/N_1_Wandering Behemoth.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Warworn Owlbear": {
+                "path": "monster/N_1_Warworn Owlbear.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Wicked Sea Serpent": {
+                "path": "monster/N_1_Wicked Sea Serpent.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            }
+        }
+    },
+    "BN": {
+        "hero": {
+            "Annihilator": {
+                "path": "berserker/BN_1_Annihilator.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Brawling Spirit": {
+                "path": "berserker/BN_1_Brawling Spirit.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Gruesome Gladiator": {
+                "path": "berserker/BN_1_Gruesome Gladiator.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Meowntain": {
+                "path": "berserker/BN_1_Meowntain.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Rabid Beast": {
+                "path": "berserker/BN_1_Rabid Beast.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Reigning King": {
+                "path": "berserker/BN_1_Reigning King.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Roaryal Guard": {
+                "path": "berserker/BN_1_Roaryal Guard.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Unbridled Furry": {
+                "path": "berserker/BN_1_Unbridled Furry.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Vicious Wildcat": {
+                "path": "berserker/BN_1_Vicious Wildcat.png",
+                "number": 1,
+                "class": "berserker",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Bark Hexer": {
+                "path": "necromancer/BN_1_Bark Hexer.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Beholden Retriever": {
+                "path": "necromancer/BN_1_Beholden Retriever.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Bone Collector": {
+                "path": "necromancer/BN_1_Bone Collector.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Boston Terror": {
+                "path": "necromancer/BN_1_Boston Terror.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Grim Pupper": {
+                "path": "necromancer/BN_1_Grim Pupper.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Hollow Husk": {
+                "path": "necromancer/BN_1_Hollow Husk.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Howl Of The Dead": {
+                "path": "necromancer/BN_1_Howl Of The Dead.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Perfect Vessel": {
+                "path": "necromancer/BN_1_Perfect Vessel.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Shadow Saint": {
+                "path": "necromancer/BN_1_Shadow Saint.png",
+                "number": 1,
+                "class": "necromancer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            }
+        }
+    },
+    "WD": {
+        "hero": {
+            "Big Buckley": {
+                "path": "druid/WD_1_Big Buckley.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Buck Omens": {
+                "path": "druid/WD_1_Buck Omens.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Doe Fallow": {
+                "path": "druid/WD_1_Doe Fallow.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Enchantler": {
+                "path": "druid/WD_1_Enchantler.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Glowing Antler": {
+                "path": "druid/WD_1_Glowing Antler.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Maegisty": {
+                "path": "druid/WD_1_Maegisty.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Magus Moose": {
+                "path": "druid/WD_1_Magus Moose.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Majestelk": {
+                "path": "druid/WD_1_Majestelk.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Stagguard": {
+                "path": "druid/WD_1_Stagguard.png",
+                "number": 1,
+                "class": "druid",
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            }
+        },
+        "warrior": {
+            "Agile Dagger": {
+                "path": "warrior/WD_1_Agile Dagger.png",
+                "number": 1
+            },
+            "Blinding Blade": {
+                "path": "warrior/WD_1_Blinding Blade.png",
+                "number": 1
+            },
+            "Critical Fang": {
+                "path": "warrior/WD_1_Critical Fang.png",
+                "number": 1
+            },
+            "Hardened Hunter": {
+                "path": "warrior/WD_1_Hardened Hunter.png",
+                "number": 1
+            },
+            "Looting Lupo": {
+                "path": "warrior/WD_1_Looting Lupo.png",
+                "number": 1
+            },
+            "Nimble Gray": {
+                "path": "warrior/WD_1_Nimble Gray.png",
+                "number": 1
+            },
+            "Silent Shield": {
+                "path": "warrior/WD_1_Silent Shield.png",
+                "number": 1
+            },
+            "Tenacious Timber": {
+                "path": "warrior/WD_1_Tenacious Timber.png",
+                "number": 1
+            },
+            "Wolfgang Pack": {
+                "path": "warrior/WD_1_Wolfgang Pack.png",
+                "number": 1
+            }
+        }
+    },
+    "HTS": {
+        "hereToSleigh": {
+            "Bag Of Holding Gifts": {
+                "path": "hereToSleigh/HTS_1_Bag Of Holding Gifts.png",
+                "number": 1
+            },
+            "Checklist": {
+                "path": "hereToSleigh/HTS_1_Checklist.png",
+                "number": 1
+            },
+            "Christmas Carol": {
+                "path": "hereToSleigh/HTS_1_Christmas Carol.png",
+                "number": 1
+            },
+            "Endless Unwrapping": {
+                "path": "hereToSleigh/HTS_1_Endless Unwrapping.png",
+                "number": 1
+            },
+            "Evergreen": {
+                "path": "hereToSleigh/HTS_1_Evergreen.png",
+                "number": 1
+            },
+            "Ez Mix Potions": {
+                "path": "hereToSleigh/HTS_1_Ez Mix Potions.png",
+                "number": 1
+            },
+            "Fireplace Fugitive": {
+                "path": "hereToSleigh/HTS_1_Fireplace Fugitive.png",
+                "number": 1
+            },
+            "Freshly Sharpened Skates": {
+                "path": "hereToSleigh/HTS_1_Freshly Sharpened Skates.png",
+                "number": 1
+            },
+            "Gag Gift": {
+                "path": "hereToSleigh/HTS_1_Gag Gift.png",
+                "number": 1
+            },
+            "Garbage Gift Challenge": {
+                "path": "hereToSleigh/HTS_1_Garbage Gift Challenge.png",
+                "number": 1
+            },
+            "Gift Bag Bandit": {
+                "path": "hereToSleigh/HTS_1_Gift Bag Bandit.png",
+                "number": 1
+            },
+            "Gift Bearer": {
+                "path": "hereToSleigh/HTS_1_Gift Bearer.png",
+                "number": 1
+            },
+            "Good Gift Challenge": {
+                "path": "hereToSleigh/HTS_1_Good Gift Challenge.png",
+                "number": 1
+            },
+            "Holly Jolly": {
+                "path": "hereToSleigh/HTS_1_Holly Jolly.png",
+                "number": 1
+            },
+            "Leader Overlay 1": {
+                "path": "hereToSleigh/HTS_1_Leader Overlay 1.png",
+                "number": 1
+            },
+            "Leader Overlay 2": {
+                "path": "hereToSleigh/HTS_1_Leader Overlay 2.png",
+                "number": 1
+            },
+            "Leader Overlay 3": {
+                "path": "hereToSleigh/HTS_1_Leader Overlay 3.png",
+                "number": 1
+            },
+            "Leader Overlay 4": {
+                "path": "hereToSleigh/HTS_1_Leader Overlay 4.png",
+                "number": 1
+            },
+            "Lil\u2019 Drummer Bard": {
+                "path": "hereToSleigh/HTS_1_Lil\u2019 Drummer Bard.png",
+                "number": 1
+            },
+            "Lump Of Coal": {
+                "path": "hereToSleigh/HTS_1_Lump Of Coal.png",
+                "number": 1
+            },
+            "Milk And Cookies": {
+                "path": "hereToSleigh/HTS_1_Milk And Cookies.png",
+                "number": 1
+            },
+            "Mint Condition Mittens": {
+                "path": "hereToSleigh/HTS_1_Mint Condition Mittens.png",
+                "number": 1
+            },
+            "Mythical Mystery": {
+                "path": "hereToSleigh/HTS_1_Mythical Mystery.png",
+                "number": 1
+            },
+            "Potluck Surprise": {
+                "path": "hereToSleigh/HTS_1_Potluck Surprise.png",
+                "number": 1
+            },
+            "Prancer": {
+                "path": "hereToSleigh/HTS_1_Prancer.png",
+                "number": 1
+            },
+            "Really Itchy Sweater": {
+                "path": "hereToSleigh/HTS_1_Really Itchy Sweater.png",
+                "number": 1
+            },
+            "Rudolph\u2019s Nose": {
+                "path": "hereToSleigh/HTS_1_Rudolph\u2019s Nose.png",
+                "number": 1
+            },
+            "Santa Claws": {
+                "path": "hereToSleigh/HTS_1_Santa Claws.png",
+                "number": 1
+            },
+            "Shiny Nose": {
+                "path": "hereToSleigh/HTS_1_Shiny Nose.png",
+                "number": 1
+            },
+            "Shooting Star": {
+                "path": "hereToSleigh/HTS_1_Shooting Star.png",
+                "number": 1
+            },
+            "Sleigh Back": {
+                "path": "hereToSleigh/HTS_1_Sleigh Back.png",
+                "number": 1
+            },
+            "Snow Slinger": {
+                "path": "hereToSleigh/HTS_1_Snow Slinger.png",
+                "number": 1
+            },
+            "Snows Of Time": {
+                "path": "hereToSleigh/HTS_1_Snows Of Time.png",
+                "number": 1
+            },
+            "The Gift Of Destruction": {
+                "path": "hereToSleigh/HTS_1_The Gift Of Destruction.png",
+                "number": 1
+            },
+            "Warm Socks": {
+                "path": "hereToSleigh/HTS_1_Warm Socks.png",
+                "number": 1
+            },
+            "Watchful Medallion": {
+                "path": "hereToSleigh/HTS_1_Watchful Medallion.png",
+                "number": 1
+            },
+            "White Elephant": {
+                "path": "hereToSleigh/HTS_1_White Elephant.png",
+                "number": 1
+            }
+        }
+    },
+    "DS": {
+        "hero": {
+            "Dragalter": {
+                "path": "sorcerer/DS_1_Dragalter.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Dystortivern": {
+                "path": "sorcerer/DS_1_Dystortivern.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Extraga": {
+                "path": "sorcerer/DS_1_Extraga.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Luut": {
+                "path": "sorcerer/DS_1_Luut.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Mirroryu": {
+                "path": "sorcerer/DS_1_Mirroryu.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Oracon": {
+                "path": "sorcerer/DS_1_Oracon.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Renovern": {
+                "path": "sorcerer/DS_1_Renovern.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Shamanaga": {
+                "path": "sorcerer/DS_1_Shamanaga.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Smok": {
+                "path": "sorcerer/DS_1_Smok.png",
+                "number": 1,
+                "class": "sorcerer",
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            }
+        }
+    }
+}
