@@ -37,7 +37,6 @@ public class Utility {
      *               'all', every player (not the controller)
      *
      * @return The Json object acting as a packet
-     * @throws JSONException if values are too weird
      */
     public static JSONObject generateJson(String name, Object value, String target) throws JSONException {
         JSONObject json = new JSONObject();
