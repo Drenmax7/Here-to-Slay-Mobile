@@ -1,14 +1,11 @@
 package com.example.jeudecarte.HereToSlay.network;
 
 
-import android.app.Activity;
-import android.content.Context;
-import android.net.nsd.NsdManager;
-import android.net.nsd.NsdServiceInfo;
+import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
+
 import android.util.Log;
 
 import com.example.jeudecarte.HereToSlay.controller.Controller;
-import com.example.jeudecarte.HereToSlay.view.Game;
 import com.example.jeudecarte.HereToSlay.view.View;
 
 import org.json.JSONException;
@@ -17,32 +14,43 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
-import java.util.ArrayList;
-import java.util.UUID;
 
 /**
  * Class that permit connexion to the server.
  * Its purpose is to receive information about the game to update the game state on screen
  * It also sends the user inputs to the server for him to proceed the player turn
- *
- * @see Server
- * @see Packet
  */
 public class Client {
     //Attributes
     /**
+     * The tag showed in the logcat console
+     */
+    private static final String TAG = GENERIC + "CLIENT";
+
+
+    /**
      * The view onto which the data will be displayed
      */
-    public View view = null;
+    public volatile View view = null;
 
-    public Controller controller = null;
+    /**
+     * The controller into which the data will be handled if it is the host client
+     */
+    public volatile Controller controller = null;
 
+    /**
+     * If it is the host client
+     */
     public Boolean isControllerClient = false;
+
+    /**
+     * The id to transmit with the packet to be identified as the right player by the server
+     */
+    private String playerUUID;
 
     /**
      * The state of the connexion
@@ -60,19 +68,14 @@ public class Client {
     private ObjectOutputStream output;
 
     /**
-     * The id to transmit with the packet to be identified as the right player
+     * Ip address of the server
      */
-    private String playerUUID;
+    private final String hostname;
 
-    private String hostname;
-
-    private int port;
-
-    private static String TAG = "affichage debug CLIENT";
-
-    public String getPlayerUUID() {
-        return playerUUID;
-    }
+    /**
+     * Port of the server
+     */
+    private final int port;
 
 
     //Constructor
@@ -85,21 +88,24 @@ public class Client {
         close = false;
         this.hostname = hostname;
         this.port = port;
-
-//        this.serviceName = serviceName;
-//
-//        nsdManager = (NsdManager) context.getSystemService(Context.NSD_SERVICE);
-//
-//        initializeResolveListener();
-//        initializeDiscoveryListener();
     }
+
+    //Getters
+
+    /**
+     * playerUUID getter
+     *
+     * @return playerUUID's value
+     */
+    public String getPlayerUUID() {
+        return playerUUID;
+    }
+
 
     //Methods
 
     /**
      * Create a new connexion with the server
-     *
-     * return in the argument if the connexion has been successful
      */
     public void connexion(){
         try {
@@ -113,9 +119,6 @@ public class Client {
 
             ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
             new Thread(() -> listen(input)).start();
-
-//            etat.add(true);
-            return;
         }
         catch (SocketTimeoutException exception){
             Log.d(TAG,"Connexion expired. Invalid address or the server is not reachable");
@@ -126,7 +129,6 @@ public class Client {
         catch (IOException exception) {
             Log.d(TAG,"I/O error: " + exception.getMessage());
         }
-//        etat.add(false);
     }
 
     /**
@@ -149,7 +151,7 @@ public class Client {
      *
      * @param input the input stream to be listened
      */
-    public void listen(ObjectInputStream input){
+    private void listen(ObjectInputStream input){
         while (!close){
             try {
                 String receivedObject = (String) input.readObject();
@@ -186,7 +188,7 @@ public class Client {
                 }
             }
             catch (IOException exception) {
-                if (exception.getMessage().equals("Connection reset")) close = true;
+                close = true;
                 throw new RuntimeException(exception);
             } catch (JSONException e) {
                 throw new RuntimeException(e);
@@ -197,7 +199,8 @@ public class Client {
     }
 
     /**
-     * Send the packet onto the output stream for the server to receive it
+     * Send the packet into the output stream for the server to receive it
+     * The packet will contain the value of playerUUID
      *
      * @param json the data to send
      */
@@ -224,9 +227,11 @@ public class Client {
     }
 
     /**
-     * Send the packet onto the output stream for the server to receive it
+     * Send the packet into the output stream for the server to receive it
+     * The packet will contain the value of the specified uuid
      *
      * @param json the data to send
+     * @param uuid the uuid of the targeted player
      */
     public void sendData(JSONObject json, String uuid){
         if (output == null) {
