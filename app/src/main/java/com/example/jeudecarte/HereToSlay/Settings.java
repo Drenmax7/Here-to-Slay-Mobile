@@ -1,6 +1,15 @@
 package com.example.jeudecarte.HereToSlay;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Settings {
+    //Personal settings
+    public static String name = "";
+    public static String language = "english";
+
+
+    //Game settings
     public static int playerNumber = 2;
     public static int gameRule = 0;
 
@@ -37,5 +46,51 @@ public class Settings {
         categoryCap = 1;
 
         forcedReroll = 1;
+    }
+
+    // Fonction pour retourner un objet JSON avec les paramètres
+    public static JSONObject exportParameter() throws JSONException {
+        JSONObject json = new JSONObject();
+        json.put("playerNumber", playerNumber);
+        json.put("gameRule", gameRule);
+
+        json.put("warriorDruid", warriorDruid);
+        json.put("berserkerNecromancer", berserkerNecromancer);
+        json.put("sorcerer", sorcerer);
+        json.put("monster", monster);
+        json.put("leader", leader);
+        json.put("hereToSleigh", hereToSleigh);
+
+        json.put("actionPoint", actionPoint);
+        json.put("cardLimit", cardLimit);
+        json.put("monsterGoal", monsterGoal);
+        json.put("heroCount", heroCount);
+        json.put("categoryCap", categoryCap);
+
+        json.put("forcedReroll", forcedReroll);
+
+        return json;
+    }
+
+    // Fonction pour mettre à jour les paramètres à partir d'un objet JSON sans vérifications
+    public static void importParameter(JSONObject json) throws JSONException {
+        // Affecter chaque paramètre directement
+        playerNumber = json.getInt("playerNumber");
+        gameRule = json.getInt("gameRule");
+
+        warriorDruid = json.getBoolean("warriorDruid");
+        berserkerNecromancer = json.getBoolean("berserkerNecromancer");
+        sorcerer = json.getBoolean("sorcerer");
+        monster = json.getBoolean("monster");
+        leader = json.getBoolean("leader");
+        hereToSleigh = json.getBoolean("hereToSleigh");
+
+        actionPoint = json.getInt("actionPoint");
+        cardLimit = json.getInt("cardLimit");
+        monsterGoal = json.getInt("monsterGoal");
+        heroCount = json.getInt("heroCount");
+        categoryCap = json.getInt("categoryCap");
+
+        forcedReroll = json.getInt("forcedReroll");
     }
 }

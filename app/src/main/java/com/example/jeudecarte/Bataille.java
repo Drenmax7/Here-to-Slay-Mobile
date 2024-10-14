@@ -3,24 +3,39 @@ package com.example.jeudecarte;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.example.jeudecarte.databinding.BatailleBinding;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Objects;
 
 public class Bataille extends Activity {
+    private static String TAG = "affichage debug BATAILLE";
+
+    private static String path = "cards_52/";
+
+    private boolean autoDraw = false;
+
+    private int totalCardsDrawn = 0;
+
     private int nombreJoueur = 2;
+
+    private Thread drawThread;
 
     //liste contenant pour chaque joueur une pair. Cette pair est sa pile de carte a
     // piocher et sa pile de carte joué. Une pile de carte est une arraylist contenant des cartes.
@@ -66,6 +81,55 @@ public class Bataille extends Activity {
         binding.draw.setWidth(700);
         binding.draw.setOnClickListener(v -> draw());
         binding.retour.setOnClickListener(v -> retourMenu());
+        binding.auto.setOnClickListener(v -> toggleAuto());
+        binding.auto.setBackgroundColor(0xFFF08080);
+
+        loadImageFromAssets(binding.drawingStack1, path+"back_dark.png");
+        loadImageFromAssets(binding.drawingStack2, path+"back_dark.png");
+
+    }
+
+    private void toggleAuto(){
+        autoDraw = !autoDraw;
+
+        if (autoDraw){
+            binding.auto.setBackgroundColor(0xFF90EE90);
+            drawThread = new Thread(this::autoDrawing);
+            drawThread.start();
+        }
+        else{
+            binding.auto.setBackgroundColor(0xFFF08080);
+            try {
+                drawThread.join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private void autoDrawing(){
+        while (autoDraw){
+            runOnUiThread(() -> binding.draw.performClick());
+
+            try {
+                Thread.sleep(5);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    private void loadImageFromAssets(ImageView image, String imagePath) {
+        AssetManager assetManager = getAssets();
+
+        try (InputStream inputStream = assetManager.open(imagePath)) {
+            Drawable drawable = Drawable.createFromStream(inputStream, null);
+            image.setImageDrawable(drawable);
+        }
+        catch (IOException e) {
+            Log.d(TAG,"error : " + e.getMessage());
+            throw new RuntimeException(e);
+        }
     }
 
     private void retourMenu(){
@@ -75,6 +139,9 @@ public class Bataille extends Activity {
 
     @SuppressLint("SetTextI18n")
     private void draw(){
+        totalCardsDrawn += 1;
+        binding.total.setText(Integer.toString(totalCardsDrawn));
+
         if (calculGagnant() != 0) {
             finDePartie();
             return;
@@ -84,15 +151,15 @@ public class Bataille extends Activity {
         card = joueurs.get(0).first.remove(0);
         joueurs.get(0).second.add(card);
 
-        int resourceId = getRessourceId(card);
-        binding.playingStack1.setImageResource(resourceId);
+        loadImageFromAssets(binding.playingStack1, path + cardToString(card) + ".png");
+
 
 
         card = joueurs.get(1).first.remove(0);
         joueurs.get(1).second.add(card);
 
-        resourceId = getRessourceId(card);
-        binding.playingStack2.setImageResource(resourceId);
+        loadImageFromAssets(binding.playingStack2, path + cardToString(card) + ".png");
+
 
         refreshCardCount();
 
@@ -114,13 +181,29 @@ public class Bataille extends Activity {
 
     @SuppressLint("SetTextI18n")
     private void take(){
+        //shuffle the cards to avoid soft locks
+        //shuffle one deck with itself
+        Collections.shuffle(joueurs.get(0).second);
+        Collections.shuffle(joueurs.get(1).second);
+
         int taille = joueurs.get(0).second.size();
         for (int i = 0; i < taille; i++){
 
-            Pair<Integer,Integer> card = joueurs.get(0).second.remove(0);
+            //randomly place either the player's 1 or 2 card first in the deck
+            int first,second;
+            if (Math.random() < 0.5){
+                first = 0;
+                second = 1;
+            }
+            else {
+                first = 1;
+                second = 0;
+            }
+
+            Pair<Integer,Integer> card = joueurs.get(first).second.remove(0);
             joueurs.get(0).first.add(card);
 
-            card = joueurs.get(1).second.remove(0);
+            card = joueurs.get(second).second.remove(0);
             joueurs.get(0).first.add(card);
         }
 
@@ -133,13 +216,29 @@ public class Bataille extends Activity {
 
     @SuppressLint("SetTextI18n")
     private void give(){
+        //shuffle the cards to avoid soft locks
+        //shuffle one deck with itself
+        Collections.shuffle(joueurs.get(0).second);
+        Collections.shuffle(joueurs.get(1).second);
+
         int taille = joueurs.get(0).second.size();
         for (int i = 0; i < taille ; i++){
 
-            Pair<Integer,Integer> card = joueurs.get(0).second.remove(0);
+            //randomly place either the player's 1 or 2 card first in the deck
+            int first,second;
+            if (Math.random() < 0.5){
+                first = 0;
+                second = 1;
+            }
+            else {
+                first = 1;
+                second = 0;
+            }
+
+            Pair<Integer,Integer> card = joueurs.get(first).second.remove(0);
             joueurs.get(1).first.add(card);
 
-            card = joueurs.get(1).second.remove(0);
+            card = joueurs.get(second).second.remove(0);
             joueurs.get(1).first.add(card);
         }
 
@@ -161,13 +260,15 @@ public class Bataille extends Activity {
         card = joueurs.get(0).first.remove(0);
         joueurs.get(0).second.add(card);
 
-        binding.playingStack1.setImageResource(R.drawable.back_dark);
+        loadImageFromAssets(binding.playingStack1, path + "back_dark.png");
+
+
 
 
         card = joueurs.get(1).first.remove(0);
         joueurs.get(1).second.add(card);
 
-        binding.playingStack2.setImageResource(R.drawable.back_dark);
+        loadImageFromAssets(binding.playingStack2, path + "back_dark.png");
 
         refreshCardCount();
 
@@ -202,6 +303,19 @@ public class Bataille extends Activity {
 
     @SuppressLint("SetTextI18n")
     private void finDePartie(){
+
+        //disable autoDraw
+        binding.auto.setOnClickListener(null);
+        if (autoDraw){
+            toggleAuto();
+        }
+
+        binding.draw.setOnClickListener(null);
+        binding.draw.setVisibility(View.GONE);
+
+        binding.endGame.setVisibility(View.VISIBLE);
+        binding.endGame.setOnClickListener(v -> retourMenu());
+
         String victoryText;
         if (calculGagnant() == 1) victoryText = "Victoire du J1 !";
         else victoryText = "Victoire du J2 !";
@@ -215,18 +329,6 @@ public class Bataille extends Activity {
 
         binding.victoire.setVisibility(View.VISIBLE);
         binding.victoire.setText(victoryText);
-
-        binding.draw.setText("Retour au menu");
-
-        binding.draw.setOnClickListener(v -> retourMenu());
-    }
-
-    @SuppressLint("DiscouragedApi")
-    private int getRessourceId(Pair<Integer,Integer> card){
-        return binding.playingStack1.getContext().getResources().getIdentifier(
-                cardToString(card),
-                "drawable",
-                binding.playingStack1.getContext().getPackageName());
     }
 
     @SuppressLint("SetTextI18n")

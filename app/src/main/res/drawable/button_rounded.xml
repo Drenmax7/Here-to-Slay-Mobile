@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Définir la couleur de fond du bouton -->
+    <solid android:color="@color/button_color" />
+
+    <!-- Définir les coins arrondis -->
+    <corners android:radius="16dp" />
+
+    <!-- Ajouter des marges ou des paddings internes, si nécessaire -->
+    <padding
+        android:left="12dp"
+        android:right="12dp"
+        android:top="8dp"
+        android:bottom="8dp" />
+
+    <!-- Ajouter un contour facultatif -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/white" /> <!-- Contour blanc, tu peux changer la couleur -->
+
+</shape>

@@ -4,6 +4,8 @@ import com.example.jeudecarte.HereToSlay.network.Client;
 import com.example.jeudecarte.HereToSlay.network.Packet;
 import com.example.jeudecarte.HereToSlay.network.Server;
 
+import org.json.JSONObject;
+
 public class GameController implements Controller{
     private Server server;
 
@@ -12,7 +14,7 @@ public class GameController implements Controller{
     }
 
     @Override
-    public void dataTreatment(Packet packet) {
+    public void dataTreatment(JSONObject json) {
 
     }
 }

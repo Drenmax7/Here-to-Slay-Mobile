@@ -1,0 +1,4 @@
+open console terminal
+check console port number : C:\Users\maxen\AppData\Local\Android\Sdk\platform-tools\adb devices
+telnet localhost PORT
+redir add tcp:PORT:HostPort

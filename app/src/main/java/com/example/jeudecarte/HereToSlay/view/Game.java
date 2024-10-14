@@ -9,6 +9,8 @@ import com.example.jeudecarte.HereToSlay.network.Packet;
 import com.example.jeudecarte.databinding.HereToSlayGameBinding;
 import com.example.jeudecarte.databinding.HereToSlayHubBinding;
 
+import org.json.JSONObject;
+
 public class Game extends Activity implements View {
     public static Client client;
 
@@ -16,7 +18,7 @@ public class Game extends Activity implements View {
     private HereToSlayGameBinding binding;
 
     @Override
-    public void dataTreatment(Packet packet) {
+    public void dataTreatment(JSONObject json) {
 
     }
 

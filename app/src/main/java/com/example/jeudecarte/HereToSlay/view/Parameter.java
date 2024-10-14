@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -381,33 +382,31 @@ public class Parameter extends Activity {
 
             Settings.forcedReroll = Integer.parseInt(binding.forcedRerollEditText.getText().toString());
 
-            // create the server
-            Server server = new Server(6666);
-            new Thread(server::run).start();
-            server.controller = new HubController(server);
 
-            //connect to server
-            Client client = new Client("localhost",6666);
+            //load hub view
+            Hub.isHost = true;
+            Intent intent = new Intent(this, Hub.class);
+            startActivity(intent);
 
-            ArrayList<Boolean> state = new ArrayList<>();
-            Thread thread = new Thread(() -> client.connexion(state));
-            thread.start();
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-
-            if (state.get(0)) {
-                Hub.client = client;
-
-                //load hub view
-                Intent intent = new Intent(this, Hub.class);
-                startActivity(intent);
-            }
-            else {
-                server.stop();
-            }
+//            ArrayList<Boolean> state = new ArrayList<>();
+//            Thread thread = new Thread(() -> client.connexion(state));
+//            thread.start();
+//            try {
+//                thread.join();
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//
+//            if (state.get(0)) {
+//                Hub.client = client;
+//
+//                //load hub view
+//                Intent intent = new Intent(this, Hub.class);
+//                startActivity(intent);
+//            }
+//            else {
+//                server.stop();
+//            }
         });
     }
 

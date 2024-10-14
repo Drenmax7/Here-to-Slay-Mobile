@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Couleur de fond de l'EditText -->
+    <solid android:color="@color/edittext_background" /> <!-- Remplacez par la couleur que vous souhaitez -->
+
+    <!-- Coins arrondis -->
+    <corners android:radius="16dp" /> <!-- Ajuste la valeur pour plus ou moins d'arrondi -->
+
+    <!-- Optionnel : Ajouter un contour autour de l'EditText -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/divider" /> <!-- Contour gris clair -->
+
+    <!-- Optionnel : Ajouter un padding interne -->
+    <padding
+        android:left="12dp"
+        android:right="12dp"
+        android:top="12dp"
+        android:bottom="12dp" />
+</shape>

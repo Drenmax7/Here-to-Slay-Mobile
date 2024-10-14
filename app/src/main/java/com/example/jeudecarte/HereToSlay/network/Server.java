@@ -2,6 +2,8 @@ package com.example.jeudecarte.HereToSlay.network;
 
 
 import android.content.Context;
+import android.net.nsd.NsdManager;
+import android.net.nsd.NsdServiceInfo;
 import android.net.wifi.WifiManager;
 import android.text.format.Formatter;
 import android.util.Log;
@@ -9,17 +11,22 @@ import android.util.Log;
 import com.example.jeudecarte.HereToSlay.controller.Controller;
 import com.example.jeudecarte.HereToSlay.controller.HubController;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -51,7 +58,7 @@ public class Server {
     /**
      * The port that is listened by the server
      */
-    private final int port;
+    private int port;
 
     /**
      * Socket on which incoming connexion are put and that permits the server to accept them
@@ -73,18 +80,30 @@ public class Server {
      */
     private final ReentrantLock lock;
 
+    //Getter
+
+    public int getPort() {
+        return port;
+    }
+
     //Constructor
+
+    public static void main(String[] args) {
+        Server server = new Server();
+        server.run();
+    }
 
     /**
      * Create a new server, listening on the given port
      *
-     * @param port the port on which the server is listening
      */
-    public Server(int port) {
-        this.port = port;
+    public Server() {
         connectedClient = new HashMap<>();
         clientOutput = new HashMap<>();
         lock = new ReentrantLock();
+
+//        initializeRegistrationListener();
+//        registerService(context);
     }
 
     //Methods
@@ -94,39 +113,58 @@ public class Server {
      * Should be run in a thread
      */
     public void run() {
-        Log.d("affichage debug","ici");
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
-//            Log.d("affichage debug",getIPAddress(true));
+
+        // Initialize a server socket on the next available port.
+        try(ServerSocket serverSocket = new ServerSocket(0)){
+            Log.d("affichage debug","server is running on port " + port);
+            // Store the chosen port.
+            port = serverSocket.getLocalPort();
+            Log.d("affichage debug","server is ready to run on port " + port);
 
             this.serverSocket = serverSocket;
             close = false;
-            System.out.println("Server is running on port " + port);
 
             // As long as the server is open, it accepts connections
             while (!close) {
                 try {
-                    Socket socket = serverSocket.accept();
-                    ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
-                    ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
-                    System.out.println("New connection from " + socket.getInetAddress().getHostAddress());
 
                     UUID playerUUID = UUID.randomUUID();
 
-                    connectedClient.put(playerUUID,socket);
-                    clientOutput.put(playerUUID,output);
+                    Socket socket = serverSocket.accept();
+                    ObjectInputStream input = new ObjectInputStream(socket.getInputStream());
+                    ObjectOutputStream output = new ObjectOutputStream(socket.getOutputStream());
 
-                    Packet packet = new Packet("uuid");
-                    packet.playerUUID = playerUUID;
-//                    packet.host = getIPAddress(true);
-                    sendDataByUUID(packet, playerUUID);
+                    Log.d("affichage debug", "New connection from " + socket.getInetAddress().getHostAddress());
 
-                    new Thread(() -> listen(socket,input,playerUUID)).start();
+
+                    lock.lock();
+                    try {
+                        connectedClient.put(playerUUID, socket);
+                        clientOutput.put(playerUUID, output);
+                    } finally {
+                        lock.unlock();
+                    }
+
+                    JSONObject json = new JSONObject();
+                    json.put("name","uuid");
+                    json.put("value", playerUUID);
+                    try (OutputStreamWriter out = new OutputStreamWriter(
+                            output, StandardCharsets.UTF_8)) {
+                        out.write(json.toString());
+                    }
+                    sendDataByUUID(json, playerUUID);
+
+                    new Thread(() -> listen(socket, input, playerUUID)).start();
 
                 } catch (IOException exception) {
-                    if (!close) System.err.println("Error while accepting connexion: " + exception.getMessage());
+                    if (!close)
+                        Log.d("affichage debug", "Error while accepting connexion: " + exception.getMessage());
+                } catch (JSONException e) {
+                    throw new RuntimeException(e);
                 }
             }
-        } catch (IOException exception) {
+        }
+        catch (IOException exception) {
             throw new RuntimeException("Error while starting the server: " + exception.getMessage(), exception);
         }
     }
@@ -144,9 +182,9 @@ public class Server {
             for (Socket socket : connectedClient.values()){
                 socket.close();
             }
-            System.out.println("Server is stopped");
+            Log.d("affichage debug","Server is stopped");
         } catch (IOException exception) {
-            System.err.println("Error while stopping the server: " + exception.getMessage());
+            Log.d("affichage debug","Error while stopping the server: " + exception.getMessage());
         }
     }
 
@@ -161,19 +199,19 @@ public class Server {
         while (!socket.isClosed()){
             try {
                 Packet receivedObject = (Packet) input.readObject();
-                controller.dataTreatment(receivedObject);
+                //controller.dataTreatment(receivedObject);
             }
             catch (ClassNotFoundException exception) {
-                System.out.println("Error while receiving data: " + exception.getMessage());
+                Log.d("affichage debug","Error while receiving data: " + exception.getMessage());
 
             }
             catch (IOException exception){
                 try {
-                    System.out.println("IO error, socket is connexion is closing" + exception.getMessage());
+                    Log.d("affichage debug","IO error, socket is connexion is closing" + exception.getMessage());
                     socket.close();
                 }
                 catch (IOException exception2){
-                    System.out.println("Error while closing client connexion" + exception2.getMessage());
+                    Log.d("affichage debug","Error while closing client connexion" + exception2.getMessage());
                 }
             }
         }
@@ -199,7 +237,7 @@ public class Server {
                 output.writeObject(packet);
                 output.flush();
             } catch (IOException exception) {
-                System.out.println("I/O error while sending data: " + exception.getMessage());
+                Log.d("affichage debug","I/O error while sending data: " + exception.getMessage());
             }
         }
     }
@@ -207,16 +245,16 @@ public class Server {
     /**
      * Send the packet to the client having the specified uuid
      *
-     * @param packet the data to send
+     * @param json the data to send
      * @param playerUUID the id of the player to which the date must be send
      */
-    public void sendDataByUUID(Packet packet, UUID playerUUID){
+    public void sendDataByUUID(JSONObject json, UUID playerUUID){
         ObjectOutputStream output = clientOutput.get(playerUUID);
         try {
-            output.writeObject(packet);
+            output.writeObject(json);
             output.flush();
         } catch (IOException exception) {
-            System.out.println("I/O error while sending data: " + exception.getMessage());
+            Log.d("affichage debug","I/O error while sending data: " + exception.getMessage());
         }
     }
 }
