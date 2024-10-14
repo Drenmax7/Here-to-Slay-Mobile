@@ -1,28 +1,24 @@
-package com.example.jeudecarte;
+package com.example.jeudecarte.Bataille;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Pair;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.BatailleBinding;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Objects;
 
 public class Bataille extends Activity {
     private static String TAG = "affichage debug BATAILLE";
