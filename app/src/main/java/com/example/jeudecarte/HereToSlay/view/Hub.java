@@ -112,6 +112,10 @@ public class Hub extends Activity implements View{
     @Override
     public void dataTreatment(JSONObject json) {
         try {
+            //if the packet is not for the player, ignore it
+            if (!json.getString("target").equals("player")) return;
+            if (!json.getString("target").equals("all")) return;
+
             switch (json.getString("name")){
                 case "uuid":
                     packetUUID();
