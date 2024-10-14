@@ -15,6 +15,10 @@ import com.example.jeudecarte.HereToSlay.view.SelfParameter;
 import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.HereToSlayHomeBinding;
 
+/**
+ * First page of the Here To Slay game
+ * Contain buttons to join, create or load a game
+ */
 public class HereToSlay extends Activity {
     //Attributes
 
