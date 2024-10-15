@@ -111,10 +111,13 @@ public class Hub extends Activity implements View{
      */
     @Override
     public void dataTreatment(JSONObject json) {
+
         try {
             //if the packet is not for the player, ignore it
-            if (!json.getString("target").equals("player")) return;
-            if (!json.getString("target").equals("all")) return;
+            if (!json.getString("target").equals("player") &&
+               (!json.getString("target").equals("all"))) {
+                return;
+            }
 
             switch (json.getString("name")){
                 case "uuid":
@@ -122,6 +125,9 @@ public class Hub extends Activity implements View{
                     break;
                 case "attributed name":
                     packetAttributedName(json);
+                    break;
+                case "settings":
+                    packetSettings(json);
                     break;
                 case "player list":
                     packetPlayerList(json);
@@ -166,6 +172,21 @@ public class Hub extends Activity implements View{
     }
 
     /**
+     * Extract the json object from the packet and fill up the setting class with those data
+     * Generate a new packet to acknowledge the reception of the setting list
+     *
+     * @param json the json object that act as a packet that the client received from the server
+     */
+    private void packetSettings(JSONObject json) throws JSONException {
+        Log.d(TAG, "settings");
+
+        Settings.importParameter(json.getJSONObject("value"));
+
+        JSONObject newJson = generateJson("settings received", "", "server");
+        client.sendData(newJson);
+    }
+
+    /**
      * Extract the json array from the packet and fill up the player list with those data
      * Generate a new packet to acknowledge the reception of the list
      *
@@ -202,6 +223,7 @@ public class Hub extends Activity implements View{
      */
     private void updateScene(){
         int y = 0;
+        Log.d(TAG, Integer.toString(Settings.playerNumber));
         for (Player player : playersList){
             TextView textView = new TextView(binding.frontLayout.getContext());
             textView.setText(player.name);

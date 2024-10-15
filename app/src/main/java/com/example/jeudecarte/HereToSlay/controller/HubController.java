@@ -6,6 +6,7 @@ import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
 
 import android.util.Log;
 
+import com.example.jeudecarte.HereToSlay.Settings;
 import com.example.jeudecarte.HereToSlay.board.Player;
 import com.example.jeudecarte.HereToSlay.network.Client;
 
@@ -75,6 +76,9 @@ public class HubController implements Controller{
                 case("player list received"):
                     packetPlayerListReceived(json);
                     break;
+                case("settings received"):
+                    packetSettingsReceived(json);
+                    break;
 
                 default:
                     Log.d(TAG,"unknown packet name : " + json.getString("name"));
@@ -107,11 +111,26 @@ public class HubController implements Controller{
     }
 
     /**
-     * Generate a packet containing the list of all players (the sender is not in it yet) and send it
+     * Generate a packet containing the list of all parameters and send it
      *
      * @param json the json object that act as a packet that the client received from the server
      */
     private void packetNameReceived(JSONObject json) throws JSONException {
+        Log.d(TAG, "name received");
+
+        JSONObject parameters = Settings.exportParameter();
+
+        JSONObject newJson = generateJson("settings",parameters,"player");
+        server.sendData(newJson, json.getString("uuid"));
+    }
+
+    /**
+     * Generate a packet containing the list of all players (the sender is not in it yet) and send it
+     *
+     * @param json the json object that act as a packet that the client received from the server
+     */
+    private void packetSettingsReceived(JSONObject json) throws JSONException {
+        Log.d(TAG, "settings received");
         //send to the new player the list of player that have logged in before him
 
         JSONArray playerListArray = new JSONArray();
