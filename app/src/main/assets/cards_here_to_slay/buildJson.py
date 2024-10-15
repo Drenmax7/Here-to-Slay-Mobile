@@ -67,6 +67,7 @@ for dossier in os.listdir():
         if (dossier in ["bard","berserker","druid","fighter","guardian","necromancer","ranger","sorcerer","thief","warriror","wizard"]):
             category = "hero"
             imageDic["class"] = dossier
+            imageDic["item slot"] = 1
         else:
             category = dossier
         

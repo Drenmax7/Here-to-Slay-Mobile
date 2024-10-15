@@ -29,6 +29,7 @@
                 "path": "bard/N_1_Dodgy Dealer.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -38,6 +39,7 @@
                 "path": "bard/N_1_Fuzzy Cheeks.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -47,6 +49,7 @@
                 "path": "bard/N_1_Greedy Cheeks.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -56,6 +59,7 @@
                 "path": "bard/N_1_Hamlet.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -65,6 +69,7 @@
                 "path": "bard/N_1_Lucky Bucky.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -74,6 +79,7 @@
                 "path": "bard/N_1_Mellow Dee.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -83,6 +89,7 @@
                 "path": "bard/N_1_Napping Nibbles.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -92,6 +99,7 @@
                 "path": "bard/N_1_Peanut.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -101,6 +109,7 @@
                 "path": "bard/N_1_Tipsy Tootie.png",
                 "number": 1,
                 "class": "bard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -110,6 +119,7 @@
                 "path": "fighter/N_1_Bad Axe.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -119,6 +129,7 @@
                 "path": "fighter/N_1_Bear Claw.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -128,6 +139,7 @@
                 "path": "fighter/N_1_Bearserker.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -137,6 +149,7 @@
                 "path": "fighter/N_1_Beary Wise.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -146,6 +159,7 @@
                 "path": "fighter/N_1_Fury Knuckle.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -155,6 +169,7 @@
                 "path": "fighter/N_1_Heavy Bear.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -164,6 +179,7 @@
                 "path": "fighter/N_1_Pan Chucks.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -173,6 +189,7 @@
                 "path": "fighter/N_1_Qi Bear.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -182,6 +199,7 @@
                 "path": "fighter/N_1_Tough Teddy.png",
                 "number": 1,
                 "class": "fighter",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -191,6 +209,7 @@
                 "path": "guardian/N_1_Calming Voice.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -200,6 +219,7 @@
                 "path": "guardian/N_1_Complex Illusion.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -209,6 +229,7 @@
                 "path": "guardian/N_1_Guiding Light.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -218,6 +239,7 @@
                 "path": "guardian/N_1_Holy Curselifter.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -227,6 +249,7 @@
                 "path": "guardian/N_1_Iron Resolve.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -236,6 +259,7 @@
                 "path": "guardian/N_1_Mighty Blade.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -245,6 +269,7 @@
                 "path": "guardian/N_1_Radiant Horn.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -254,6 +279,7 @@
                 "path": "guardian/N_1_Vibrant Glow.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -263,6 +289,7 @@
                 "path": "guardian/N_1_Wise Shield.png",
                 "number": 1,
                 "class": "guardian",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -272,6 +299,7 @@
                 "path": "ranger/N_1_Bullseye.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -281,6 +309,7 @@
                 "path": "ranger/N_1_Hoodwink.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -290,6 +319,7 @@
                 "path": "ranger/N_1_Hook.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -299,6 +329,7 @@
                 "path": "ranger/N_1_Lookie Rookie.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -308,6 +339,7 @@
                 "path": "ranger/N_1_Quick Draw.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -317,6 +349,7 @@
                 "path": "ranger/N_1_Serious Grey.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -326,6 +359,7 @@
                 "path": "ranger/N_1_Sharp Fox.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -335,6 +369,7 @@
                 "path": "ranger/N_1_Wildshot.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -344,6 +379,7 @@
                 "path": "ranger/N_1_Wily Red.png",
                 "number": 1,
                 "class": "ranger",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -353,6 +389,7 @@
                 "path": "thief/N_1_Kit Napper.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -362,6 +399,7 @@
                 "path": "thief/N_1_Meowzio.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -371,6 +409,7 @@
                 "path": "thief/N_1_Plundering Puma.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -380,6 +419,7 @@
                 "path": "thief/N_1_Purring Bandit.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -389,6 +429,7 @@
                 "path": "thief/N_1_Shurikitty.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -398,6 +439,7 @@
                 "path": "thief/N_1_Silent Shadow.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -407,6 +449,7 @@
                 "path": "thief/N_1_Slippery Paws.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -416,6 +459,7 @@
                 "path": "thief/N_1_Sly Pickings.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -425,6 +469,7 @@
                 "path": "thief/N_1_Smooth Mimimeow.png",
                 "number": 1,
                 "class": "thief",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -434,6 +479,7 @@
                 "path": "wizard/N_1_Bun Bun.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -443,6 +489,7 @@
                 "path": "wizard/N_1_Buttons.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -452,6 +499,7 @@
                 "path": "wizard/N_1_Fluffy.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -461,6 +509,7 @@
                 "path": "wizard/N_1_Hopper.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -470,6 +519,7 @@
                 "path": "wizard/N_1_Mimi.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -479,6 +529,7 @@
                 "path": "wizard/N_1_Snowball.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -488,6 +539,7 @@
                 "path": "wizard/N_1_Spooky.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -497,6 +549,7 @@
                 "path": "wizard/N_1_Whiskers.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -506,6 +559,7 @@
                 "path": "wizard/N_1_Wiggles.png",
                 "number": 1,
                 "class": "wizard",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -513,26 +567,14 @@
             }
         },
         "challenge": {
+            "Challenge": {
+                "path": "challenge/N_14_Challenge.png",
+                "number": 14,
+                "bonus": 0,
+                "class": ""
+            },
             "Bard Challenge": {
                 "path": "challenge/N_1_Bard Challenge.png",
-                "number": 1,
-                "bonus": 0,
-                "class": ""
-            },
-            "Berserker Challenge": {
-                "path": "challenge/N_1_Berserker Challenge.png",
-                "number": 1,
-                "bonus": 0,
-                "class": ""
-            },
-            "Challenge": {
-                "path": "challenge/N_1_Challenge.png",
-                "number": 1,
-                "bonus": 0,
-                "class": ""
-            },
-            "Druid Challenge": {
-                "path": "challenge/N_1_Druid Challenge.png",
                 "number": 1,
                 "bonus": 0,
                 "class": ""
@@ -549,32 +591,14 @@
                 "bonus": 0,
                 "class": ""
             },
-            "Necromancer Challenge": {
-                "path": "challenge/N_1_Necromancer Challenge.png",
-                "number": 1,
-                "bonus": 0,
-                "class": ""
-            },
             "Ranger Challenge": {
                 "path": "challenge/N_1_Ranger Challenge.png",
                 "number": 1,
                 "bonus": 0,
                 "class": ""
             },
-            "Sorcerer Challenge": {
-                "path": "challenge/N_1_Sorcerer Challenge.png",
-                "number": 1,
-                "bonus": 0,
-                "class": ""
-            },
             "Thief Challenge": {
                 "path": "challenge/N_1_Thief Challenge.png",
-                "number": 1,
-                "bonus": 0,
-                "class": ""
-            },
-            "Warrior Challenge": {
-                "path": "challenge/N_1_Warrior Challenge.png",
                 "number": 1,
                 "bonus": 0,
                 "class": ""
@@ -587,21 +611,6 @@
             }
         },
         "cursed": {
-            "Curse Of The Snake\u2019s Eyes": {
-                "path": "cursed/N_1_Curse Of The Snake\u2019s Eyes.png",
-                "number": 1,
-                "effect": []
-            },
-            "Cursed Glove": {
-                "path": "cursed/N_1_Cursed Glove.png",
-                "number": 1,
-                "effect": []
-            },
-            "Dragon\u2019s Bile": {
-                "path": "cursed/N_1_Dragon\u2019s Bile.png",
-                "number": 1,
-                "effect": []
-            },
             "Mask Of Misfortune": {
                 "path": "cursed/N_1_Mask Of Misfortune.png",
                 "number": 1,
@@ -612,45 +621,20 @@
                 "number": 1,
                 "effect": []
             },
-            "Soul Tether": {
-                "path": "cursed/N_1_Soul Tether.png",
-                "number": 1,
-                "effect": []
-            },
-            "Soulbound Grimoire": {
-                "path": "cursed/N_1_Soulbound Grimoire.png",
-                "number": 1,
-                "effect": []
-            },
             "Suspiciously Shiny Coin": {
                 "path": "cursed/N_1_Suspiciously Shiny Coin.png",
                 "number": 1,
                 "effect": []
+            },
+            "Curse Of The Snake\u2019s Eyes": {
+                "path": "cursed/N_2_Curse Of The Snake\u2019s Eyes.png",
+                "number": 2,
+                "effect": []
             }
         },
         "item": {
-            "Biggest Ring Ever": {
-                "path": "item/N_1_Biggest Ring Ever.png",
-                "number": 1,
-                "effect": []
-            },
-            "Bottomless Bag": {
-                "path": "item/N_1_Bottomless Bag.png",
-                "number": 1,
-                "effect": []
-            },
             "Decoy Doll": {
                 "path": "item/N_1_Decoy Doll.png",
-                "number": 1,
-                "effect": []
-            },
-            "Even Bigger Ring": {
-                "path": "item/N_1_Even Bigger Ring.png",
-                "number": 1,
-                "effect": []
-            },
-            "Goblet Of Caffeination": {
-                "path": "item/N_1_Goblet Of Caffeination.png",
                 "number": 1,
                 "effect": []
             },
@@ -660,33 +644,17 @@
                 "effect": []
             },
             "Particularly Rusty Coin": {
-                "path": "item/N_1_Particularly Rusty Coin.png",
-                "number": 1,
+                "path": "item/N_2_Particularly Rusty Coin.png",
+                "number": 2,
                 "effect": []
             },
             "Really Big Ring": {
-                "path": "item/N_1_Really Big Ring.png",
-                "number": 1,
-                "effect": []
-            },
-            "Silver Lining": {
-                "path": "item/N_1_Silver Lining.png",
-                "number": 1,
-                "effect": []
-            },
-            "Temporal Hourglass": {
-                "path": "item/N_1_Temporal Hourglass.png",
-                "number": 1,
+                "path": "item/N_2_Really Big Ring.png",
+                "number": 2,
                 "effect": []
             }
         },
         "leader": {
-            "The Brutal Bow": {
-                "path": "leader/N_1_The Brutal Bow.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
             "The Charismatic Song": {
                 "path": "leader/N_1_The Charismatic Song.png",
                 "number": 1,
@@ -705,50 +673,8 @@
                 "passive": [],
                 "class": []
             },
-            "The Fearless Flame": {
-                "path": "leader/N_1_The Fearless Flame.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Fierce Panguardian": {
-                "path": "leader/N_1_The Fierce Panguardian.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
             "The Fist Of Reason": {
                 "path": "leader/N_1_The Fist Of Reason.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Gnawing Dread": {
-                "path": "leader/N_1_The Gnawing Dread.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Illusive Trickster": {
-                "path": "leader/N_1_The Illusive Trickster.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Mystical Maestro": {
-                "path": "leader/N_1_The Mystical Maestro.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Noble Shaman": {
-                "path": "leader/N_1_The Noble Shaman.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Piercing Howl": {
-                "path": "leader/N_1_The Piercing Howl.png",
                 "number": 1,
                 "passive": [],
                 "class": []
@@ -759,68 +685,20 @@
                 "passive": [],
                 "class": []
             },
-            "The Raging Manticore": {
-                "path": "leader/N_1_The Raging Manticore.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Rhythmic Archer": {
-                "path": "leader/N_1_The Rhythmic Archer.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
             "The Shadow Claw": {
                 "path": "leader/N_1_The Shadow Claw.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Unstable Unicorn": {
-                "path": "leader/N_1_The Unstable Unicorn.png",
-                "number": 1,
-                "passive": [],
-                "class": []
-            },
-            "The Veiled Raider": {
-                "path": "leader/N_1_The Veiled Raider.png",
                 "number": 1,
                 "passive": [],
                 "class": []
             }
         },
         "magic": {
-            "Beast Call": {
-                "path": "magic/N_1_Beast Call.png",
-                "number": 1
-            },
             "Call To The Fallen": {
                 "path": "magic/N_1_Call To The Fallen.png",
                 "number": 1
             },
             "Captivating Spell": {
                 "path": "magic/N_1_Captivating Spell.png",
-                "number": 1
-            },
-            "Critical Boost": {
-                "path": "magic/N_1_Critical Boost.png",
-                "number": 1
-            },
-            "Destructive Spell": {
-                "path": "magic/N_1_Destructive Spell.png",
-                "number": 1
-            },
-            "Egg Of Fortune": {
-                "path": "magic/N_1_Egg Of Fortune.png",
-                "number": 1
-            },
-            "Enchanted Spell": {
-                "path": "magic/N_1_Enchanted Spell.png",
-                "number": 1
-            },
-            "Entangling Trap": {
-                "path": "magic/N_1_Entangling Trap.png",
                 "number": 1
             },
             "Forced Exchange": {
@@ -831,36 +709,30 @@
                 "path": "magic/N_1_Forceful Winds.png",
                 "number": 1
             },
-            "Lightning Labrys": {
-                "path": "magic/N_1_Lightning Labrys.png",
-                "number": 1
+            "Critical Boost": {
+                "path": "magic/N_2_Critical Boost.png",
+                "number": 2
             },
-            "Mass Sacrifice": {
-                "path": "magic/N_1_Mass Sacrifice.png",
-                "number": 1
+            "Destructive Spell": {
+                "path": "magic/N_2_Destructive Spell.png",
+                "number": 2
             },
-            "Rapid Refresh": {
-                "path": "magic/N_1_Rapid Refresh.png",
-                "number": 1
+            "Enchanted Spell": {
+                "path": "magic/N_2_Enchanted Spell.png",
+                "number": 2
+            },
+            "Entangling Trap": {
+                "path": "magic/N_2_Entangling Trap.png",
+                "number": 2
             },
             "Winds Of Change": {
-                "path": "magic/N_1_Winds Of Change.png",
-                "number": 1
+                "path": "magic/N_2_Winds Of Change.png",
+                "number": 2
             }
         },
         "mask": {
             "Bard Mask": {
                 "path": "mask/N_1_Bard Mask.png",
-                "number": 1,
-                "class": ""
-            },
-            "Berserker Mask": {
-                "path": "mask/N_1_Berserker Mask.png",
-                "number": 1,
-                "class": ""
-            },
-            "Druid Mask": {
-                "path": "mask/N_1_Druid Mask.png",
                 "number": 1,
                 "class": ""
             },
@@ -874,28 +746,13 @@
                 "number": 1,
                 "class": ""
             },
-            "Necromancer Mask": {
-                "path": "mask/N_1_Necromancer Mask.png",
-                "number": 1,
-                "class": ""
-            },
             "Ranger Mask": {
                 "path": "mask/N_1_Ranger Mask.png",
                 "number": 1,
                 "class": ""
             },
-            "Sorcerer Mask": {
-                "path": "mask/N_1_Sorcerer Mask.png",
-                "number": 1,
-                "class": ""
-            },
             "Thief Mask": {
                 "path": "mask/N_1_Thief Mask.png",
-                "number": 1,
-                "class": ""
-            },
-            "Warrior Mask": {
-                "path": "mask/N_1_Warrior Mask.png",
                 "number": 1,
                 "class": ""
             },
@@ -906,20 +763,6 @@
             }
         },
         "modifier": {
-            "Modifier +1 -1": {
-                "path": "modifier/N_1_Modifier +1 -1.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
-            "Modifier +1 -3": {
-                "path": "modifier/N_1_Modifier +1 -3.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
             "Modifier +1 -4": {
                 "path": "modifier/N_1_Modifier +1 -4.png",
                 "number": 1,
@@ -927,36 +770,8 @@
                 "negative": 0,
                 "special": []
             },
-            "Modifier +2 -1": {
-                "path": "modifier/N_1_Modifier +2 -1.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
-            "Modifier +2 -2 bis": {
-                "path": "modifier/N_1_Modifier +2 -2 bis.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
-            "Modifier +2 -2": {
-                "path": "modifier/N_1_Modifier +2 -2.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
             "Modifier +2 -3": {
                 "path": "modifier/N_1_Modifier +2 -3.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
-            "Modifier +3 -1": {
-                "path": "modifier/N_1_Modifier +3 -1.png",
                 "number": 1,
                 "positive": 0,
                 "negative": 0,
@@ -976,51 +791,37 @@
                 "negative": 0,
                 "special": []
             },
-            "Modifier +4 bis": {
-                "path": "modifier/N_1_Modifier +4 bis.png",
-                "number": 1,
+            "Modifier +1 -3": {
+                "path": "modifier/N_4_Modifier +1 -3.png",
+                "number": 4,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +3 -1": {
+                "path": "modifier/N_4_Modifier +3 -1.png",
+                "number": 4,
                 "positive": 0,
                 "negative": 0,
                 "special": []
             },
             "Modifier +4": {
-                "path": "modifier/N_1_Modifier +4.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
-            "Modifier +6": {
-                "path": "modifier/N_1_Modifier +6.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
-            "Modifier +7": {
-                "path": "modifier/N_1_Modifier +7.png",
-                "number": 1,
-                "positive": 0,
-                "negative": 0,
-                "special": []
-            },
-            "Modifier -4 bis": {
-                "path": "modifier/N_1_Modifier -4 bis.png",
-                "number": 1,
+                "path": "modifier/N_4_Modifier +4.png",
+                "number": 4,
                 "positive": 0,
                 "negative": 0,
                 "special": []
             },
             "Modifier -4": {
-                "path": "modifier/N_1_Modifier -4.png",
-                "number": 1,
+                "path": "modifier/N_4_Modifier -4.png",
+                "number": 4,
                 "positive": 0,
                 "negative": 0,
                 "special": []
             },
-            "Modifier -6": {
-                "path": "modifier/N_1_Modifier -6.png",
-                "number": 1,
+            "Modifier +2 -2": {
+                "path": "modifier/N_9_Modifier +2 -2.png",
+                "number": 9,
                 "positive": 0,
                 "negative": 0,
                 "special": []
@@ -1029,21 +830,6 @@
         "monster": {
             "Abyss Queen": {
                 "path": "monster/N_1_Abyss Queen.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Ancient Megashark": {
-                "path": "monster/N_1_Ancient Megashark.png",
                 "number": 1,
                 "passive": [],
                 "positive": {
@@ -1102,36 +888,6 @@
                 "special": [],
                 "requiredClasses": []
             },
-            "Calamity Mongrel": {
-                "path": "monster/N_1_Calamity Mongrel.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Clawed Nightmare": {
-                "path": "monster/N_1_Clawed Nightmare.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
             "Corrupted Sabretooth": {
                 "path": "monster/N_1_Corrupted Sabretooth.png",
                 "number": 1,
@@ -1177,83 +933,8 @@
                 "special": [],
                 "requiredClasses": []
             },
-            "Doombringer": {
-                "path": "monster/N_1_Doombringer.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
             "Dracos": {
                 "path": "monster/N_1_Dracos.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Dragon Wasp": {
-                "path": "monster/N_1_Dragon Wasp.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Feral Dragon": {
-                "path": "monster/N_1_Feral Dragon.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Goretelodont": {
-                "path": "monster/N_1_Goretelodont.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Lumbering Demon": {
-                "path": "monster/N_1_Lumbering Demon.png",
                 "number": 1,
                 "passive": [],
                 "positive": {
@@ -1297,21 +978,6 @@
                 "special": [],
                 "requiredClasses": []
             },
-            "Muscipula Rex": {
-                "path": "monster/N_1_Muscipula Rex.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
             "Orthus": {
                 "path": "monster/N_1_Orthus.png",
                 "number": 1,
@@ -1327,83 +993,8 @@
                 "special": [],
                 "requiredClasses": []
             },
-            "Possessed Plush": {
-                "path": "monster/N_1_Possessed Plush.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Reef Ripper": {
-                "path": "monster/N_1_Reef Ripper.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Reptilian Ripper": {
-                "path": "monster/N_1_Reptilian Ripper.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
             "Rex Major": {
                 "path": "monster/N_1_Rex Major.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Saffyre Phoenix": {
-                "path": "monster/N_1_Saffyre Phoenix.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Scavenger Griffin": {
-                "path": "monster/N_1_Scavenger Griffin.png",
                 "number": 1,
                 "passive": [],
                 "positive": {
@@ -1447,68 +1038,8 @@
                 "special": [],
                 "requiredClasses": []
             },
-            "Venomous Gemini": {
-                "path": "monster/N_1_Venomous Gemini.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Voltclaw Lion": {
-                "path": "monster/N_1_Voltclaw Lion.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Wandering Behemoth": {
-                "path": "monster/N_1_Wandering Behemoth.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
             "Warworn Owlbear": {
                 "path": "monster/N_1_Warworn Owlbear.png",
-                "number": 1,
-                "passive": [],
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "negative": {
-                    "roll": 7,
-                    "effect": []
-                },
-                "special": [],
-                "requiredClasses": []
-            },
-            "Wicked Sea Serpent": {
-                "path": "monster/N_1_Wicked Sea Serpent.png",
                 "number": 1,
                 "passive": [],
                 "positive": {
@@ -1530,6 +1061,7 @@
                 "path": "berserker/BN_1_Annihilator.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1539,6 +1071,7 @@
                 "path": "berserker/BN_1_Brawling Spirit.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1548,6 +1081,7 @@
                 "path": "berserker/BN_1_Gruesome Gladiator.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1557,6 +1091,7 @@
                 "path": "berserker/BN_1_Meowntain.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1566,6 +1101,7 @@
                 "path": "berserker/BN_1_Rabid Beast.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1575,6 +1111,7 @@
                 "path": "berserker/BN_1_Reigning King.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1584,6 +1121,7 @@
                 "path": "berserker/BN_1_Roaryal Guard.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1593,6 +1131,7 @@
                 "path": "berserker/BN_1_Unbridled Furry.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1602,6 +1141,7 @@
                 "path": "berserker/BN_1_Vicious Wildcat.png",
                 "number": 1,
                 "class": "berserker",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1611,6 +1151,7 @@
                 "path": "necromancer/BN_1_Bark Hexer.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1620,6 +1161,7 @@
                 "path": "necromancer/BN_1_Beholden Retriever.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1629,6 +1171,7 @@
                 "path": "necromancer/BN_1_Bone Collector.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1638,6 +1181,7 @@
                 "path": "necromancer/BN_1_Boston Terror.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1647,6 +1191,7 @@
                 "path": "necromancer/BN_1_Grim Pupper.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1656,6 +1201,7 @@
                 "path": "necromancer/BN_1_Hollow Husk.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1665,6 +1211,7 @@
                 "path": "necromancer/BN_1_Howl Of The Dead.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1674,6 +1221,7 @@
                 "path": "necromancer/BN_1_Perfect Vessel.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1683,6 +1231,290 @@
                 "path": "necromancer/BN_1_Shadow Saint.png",
                 "number": 1,
                 "class": "necromancer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            }
+        },
+        "challenge": {
+            "Berserker Challenge": {
+                "path": "challenge/BN_1_Berserker Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Necromancer Challenge": {
+                "path": "challenge/BN_1_Necromancer Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            }
+        },
+        "cursed": {
+            "Dragon\u2019s Bile": {
+                "path": "cursed/BN_1_Dragon\u2019s Bile.png",
+                "number": 1,
+                "effect": []
+            },
+            "Soulbound Grimoire": {
+                "path": "cursed/BN_1_Soulbound Grimoire.png",
+                "number": 1,
+                "effect": []
+            }
+        },
+        "item": {
+            "Biggest Ring Ever": {
+                "path": "item/BN_1_Biggest Ring Ever.png",
+                "number": 1,
+                "effect": []
+            },
+            "Goblet Of Caffeination": {
+                "path": "item/BN_1_Goblet Of Caffeination.png",
+                "number": 1,
+                "effect": []
+            },
+            "Silver Lining": {
+                "path": "item/BN_1_Silver Lining.png",
+                "number": 1,
+                "effect": []
+            }
+        },
+        "leader": {
+            "The Gnawing Dread": {
+                "path": "leader/BN_1_The Gnawing Dread.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Raging Manticore": {
+                "path": "leader/BN_1_The Raging Manticore.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            }
+        },
+        "magic": {
+            "Lightning Labrys": {
+                "path": "magic/BN_2_Lightning Labrys.png",
+                "number": 2
+            },
+            "Mass Sacrifice": {
+                "path": "magic/BN_2_Mass Sacrifice.png",
+                "number": 2
+            }
+        },
+        "mask": {
+            "Berserker Mask": {
+                "path": "mask/BN_1_Berserker Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Necromancer Mask": {
+                "path": "mask/BN_1_Necromancer Mask.png",
+                "number": 1,
+                "class": ""
+            }
+        },
+        "modifier": {
+            "Modifier +2 -2 bis": {
+                "path": "modifier/BN_1_Modifier +2 -2 bis.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +7": {
+                "path": "modifier/BN_1_Modifier +7.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            }
+        },
+        "monster": {
+            "Doombringer": {
+                "path": "monster/BN_1_Doombringer.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Reptilian Ripper": {
+                "path": "monster/BN_1_Reptilian Ripper.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            }
+        }
+    },
+    "DS": {
+        "challenge": {
+            "Sorcerer Challenge": {
+                "path": "challenge/DS_1_Sorcerer Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            }
+        },
+        "leader": {
+            "The Fearless Flame": {
+                "path": "leader/DS_1_The Fearless Flame.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            }
+        },
+        "magic": {
+            "Egg Of Fortune": {
+                "path": "magic/DS_1_Egg Of Fortune.png",
+                "number": 1
+            }
+        },
+        "mask": {
+            "Sorcerer Mask": {
+                "path": "mask/DS_1_Sorcerer Mask.png",
+                "number": 1,
+                "class": ""
+            }
+        },
+        "modifier": {
+            "Modifier +6": {
+                "path": "modifier/DS_1_Modifier +6.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier -6": {
+                "path": "modifier/DS_1_Modifier -6.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            }
+        },
+        "monster": {
+            "Calamity Mongrel": {
+                "path": "monster/DS_1_Calamity Mongrel.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            }
+        },
+        "hero": {
+            "Dragalter": {
+                "path": "sorcerer/DS_1_Dragalter.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Dystortivern": {
+                "path": "sorcerer/DS_1_Dystortivern.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Extraga": {
+                "path": "sorcerer/DS_1_Extraga.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Luut": {
+                "path": "sorcerer/DS_1_Luut.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Mirroryu": {
+                "path": "sorcerer/DS_1_Mirroryu.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Oracon": {
+                "path": "sorcerer/DS_1_Oracon.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Renovern": {
+                "path": "sorcerer/DS_1_Renovern.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Shamanaga": {
+                "path": "sorcerer/DS_1_Shamanaga.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Smok": {
+                "path": "sorcerer/DS_1_Smok.png",
+                "number": 1,
+                "class": "sorcerer",
+                "item slot": 1,
                 "positive": {
                     "roll": 7,
                     "effect": []
@@ -1691,11 +1523,38 @@
         }
     },
     "WD": {
+        "challenge": {
+            "Druid Challenge": {
+                "path": "challenge/WD_1_Druid Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            },
+            "Warrior Challenge": {
+                "path": "challenge/WD_1_Warrior Challenge.png",
+                "number": 1,
+                "bonus": 0,
+                "class": ""
+            }
+        },
+        "cursed": {
+            "Cursed Glove": {
+                "path": "cursed/WD_1_Cursed Glove.png",
+                "number": 1,
+                "effect": []
+            },
+            "Soul Tether": {
+                "path": "cursed/WD_1_Soul Tether.png",
+                "number": 1,
+                "effect": []
+            }
+        },
         "hero": {
             "Big Buckley": {
                 "path": "druid/WD_1_Big Buckley.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1705,6 +1564,7 @@
                 "path": "druid/WD_1_Buck Omens.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1714,6 +1574,7 @@
                 "path": "druid/WD_1_Doe Fallow.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1723,6 +1584,7 @@
                 "path": "druid/WD_1_Enchantler.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1732,6 +1594,7 @@
                 "path": "druid/WD_1_Glowing Antler.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1741,6 +1604,7 @@
                 "path": "druid/WD_1_Maegisty.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1750,6 +1614,7 @@
                 "path": "druid/WD_1_Magus Moose.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1759,6 +1624,7 @@
                 "path": "druid/WD_1_Majestelk.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
@@ -1768,10 +1634,126 @@
                 "path": "druid/WD_1_Stagguard.png",
                 "number": 1,
                 "class": "druid",
+                "item slot": 1,
                 "negative": {
                     "roll": 7,
                     "effect": []
                 }
+            }
+        },
+        "item": {
+            "Bottomless Bag": {
+                "path": "item/WD_1_Bottomless Bag.png",
+                "number": 1,
+                "effect": []
+            },
+            "Even Bigger Ring": {
+                "path": "item/WD_1_Even Bigger Ring.png",
+                "number": 1,
+                "effect": []
+            },
+            "Temporal Hourglass": {
+                "path": "item/WD_1_Temporal Hourglass.png",
+                "number": 1,
+                "effect": []
+            }
+        },
+        "leader": {
+            "The Noble Shaman": {
+                "path": "leader/WD_1_The Noble Shaman.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            },
+            "The Piercing Howl": {
+                "path": "leader/WD_1_The Piercing Howl.png",
+                "number": 1,
+                "passive": [],
+                "class": []
+            }
+        },
+        "magic": {
+            "Beast Call": {
+                "path": "magic/WD_1_Beast Call.png",
+                "number": 1
+            },
+            "Rapid Refresh": {
+                "path": "magic/WD_1_Rapid Refresh.png",
+                "number": 1
+            }
+        },
+        "mask": {
+            "Druid Mask": {
+                "path": "mask/WD_1_Druid Mask.png",
+                "number": 1,
+                "class": ""
+            },
+            "Warrior Mask": {
+                "path": "mask/WD_1_Warrior Mask.png",
+                "number": 1,
+                "class": ""
+            }
+        },
+        "modifier": {
+            "Modifier +1 -1": {
+                "path": "modifier/WD_1_Modifier +1 -1.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +2 -1": {
+                "path": "modifier/WD_1_Modifier +2 -1.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier +4 bis": {
+                "path": "modifier/WD_1_Modifier +4 bis.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            },
+            "Modifier -4 bis": {
+                "path": "modifier/WD_1_Modifier -4 bis.png",
+                "number": 1,
+                "positive": 0,
+                "negative": 0,
+                "special": []
+            }
+        },
+        "monster": {
+            "Feral Dragon": {
+                "path": "monster/WD_1_Feral Dragon.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Muscipula Rex": {
+                "path": "monster/WD_1_Muscipula Rex.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
             }
         },
         "warrior": {
@@ -1965,88 +1947,248 @@
             }
         }
     },
-    "DS": {
-        "hero": {
-            "Dragalter": {
-                "path": "sorcerer/DS_1_Dragalter.png",
+    "L": {
+        "leader": {
+            "The Brutal Bow": {
+                "path": "leader/L_1_The Brutal Bow.png",
                 "number": 1,
-                "class": "sorcerer",
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                }
+                "passive": [],
+                "class": []
             },
-            "Dystortivern": {
-                "path": "sorcerer/DS_1_Dystortivern.png",
+            "The Fierce Panguardian": {
+                "path": "leader/L_1_The Fierce Panguardian.png",
                 "number": 1,
-                "class": "sorcerer",
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                }
+                "passive": [],
+                "class": []
             },
-            "Extraga": {
-                "path": "sorcerer/DS_1_Extraga.png",
+            "The Illusive Trickster": {
+                "path": "leader/L_1_The Illusive Trickster.png",
                 "number": 1,
-                "class": "sorcerer",
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                }
+                "passive": [],
+                "class": []
             },
-            "Luut": {
-                "path": "sorcerer/DS_1_Luut.png",
+            "The Mystical Maestro": {
+                "path": "leader/L_1_The Mystical Maestro.png",
                 "number": 1,
-                "class": "sorcerer",
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                }
+                "passive": [],
+                "class": []
             },
-            "Mirroryu": {
-                "path": "sorcerer/DS_1_Mirroryu.png",
+            "The Rhythmic Archer": {
+                "path": "leader/L_1_The Rhythmic Archer.png",
                 "number": 1,
-                "class": "sorcerer",
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                }
+                "passive": [],
+                "class": []
             },
-            "Oracon": {
-                "path": "sorcerer/DS_1_Oracon.png",
+            "The Unstable Unicorn": {
+                "path": "leader/L_1_The Unstable Unicorn.png",
                 "number": 1,
-                "class": "sorcerer",
-                "positive": {
-                    "roll": 7,
-                    "effect": []
-                }
+                "passive": [],
+                "class": []
             },
-            "Renovern": {
-                "path": "sorcerer/DS_1_Renovern.png",
+            "The Veiled Raider": {
+                "path": "leader/L_1_The Veiled Raider.png",
                 "number": 1,
-                "class": "sorcerer",
+                "passive": [],
+                "class": []
+            }
+        }
+    },
+    "M": {
+        "monster": {
+            "Ancient Megashark": {
+                "path": "monster/M_1_Ancient Megashark.png",
+                "number": 1,
+                "passive": [],
                 "positive": {
                     "roll": 7,
                     "effect": []
-                }
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
             },
-            "Shamanaga": {
-                "path": "sorcerer/DS_1_Shamanaga.png",
+            "Clawed Nightmare": {
+                "path": "monster/M_1_Clawed Nightmare.png",
                 "number": 1,
-                "class": "sorcerer",
+                "passive": [],
                 "positive": {
                     "roll": 7,
                     "effect": []
-                }
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
             },
-            "Smok": {
-                "path": "sorcerer/DS_1_Smok.png",
+            "Dragon Wasp": {
+                "path": "monster/M_1_Dragon Wasp.png",
                 "number": 1,
-                "class": "sorcerer",
+                "passive": [],
                 "positive": {
                     "roll": 7,
                     "effect": []
-                }
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Goretelodont": {
+                "path": "monster/M_1_Goretelodont.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Lumbering Demon": {
+                "path": "monster/M_1_Lumbering Demon.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Possessed Plush": {
+                "path": "monster/M_1_Possessed Plush.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Reef Ripper": {
+                "path": "monster/M_1_Reef Ripper.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Saffyre Phoenix": {
+                "path": "monster/M_1_Saffyre Phoenix.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Scavenger Griffin": {
+                "path": "monster/M_1_Scavenger Griffin.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Venomous Gemini": {
+                "path": "monster/M_1_Venomous Gemini.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Voltclaw Lion": {
+                "path": "monster/M_1_Voltclaw Lion.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Wandering Behemoth": {
+                "path": "monster/M_1_Wandering Behemoth.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
+            },
+            "Wicked Sea Serpent": {
+                "path": "monster/M_1_Wicked Sea Serpent.png",
+                "number": 1,
+                "passive": [],
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "negative": {
+                    "roll": 7,
+                    "effect": []
+                },
+                "special": [],
+                "requiredClasses": []
             }
         }
     }
