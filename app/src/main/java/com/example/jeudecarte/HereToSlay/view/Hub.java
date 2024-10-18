@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.jeudecarte.HereToSlay.Settings;
 import com.example.jeudecarte.HereToSlay.board.Player;
+import com.example.jeudecarte.HereToSlay.card.Leader;
 import com.example.jeudecarte.HereToSlay.controller.HubController;
 import com.example.jeudecarte.HereToSlay.network.Client;
 import com.example.jeudecarte.databinding.HereToSlayHubBinding;
@@ -211,6 +212,9 @@ public class Hub extends Activity implements View{
                 case "new player":
                     packetNewPlayer(json);
                     break;
+                case "new leader":
+                    changeLeader(json);
+                    break;
                 default:
                     Log.d(TAG,"unknown packet name : " + json.getString("name"));
             }
@@ -292,6 +296,21 @@ public class Hub extends Activity implements View{
         Player player = new Player(json.getJSONObject("value"));
         playersList.add(player);
         runOnUiThread(this::updateScene);
+    }
+
+    private void changeLeader(JSONObject json) throws JSONException{
+        Log.d(TAG, "packet new leader");
+
+        JSONObject value = json.getJSONObject("value");
+        String name = value.getString("name");
+
+        for (Player player : playersList){
+            if (player.name.equals(name)){
+                player.leader = new Leader(value.getJSONObject("card"));
+            }
+        }
+
+        updateScene();
     }
 
     /**

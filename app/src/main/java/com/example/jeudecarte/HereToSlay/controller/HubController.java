@@ -1,5 +1,6 @@
 package com.example.jeudecarte.HereToSlay.controller;
 
+import static com.example.jeudecarte.HereToSlay.InfoDeck.getCategoryList;
 import static com.example.jeudecarte.HereToSlay.Utility.generateJson;
 import static com.example.jeudecarte.HereToSlay.InfoDeck.getRandomName;
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
@@ -8,7 +9,9 @@ import android.util.Log;
 
 import com.example.jeudecarte.HereToSlay.Settings;
 import com.example.jeudecarte.HereToSlay.board.Player;
+import com.example.jeudecarte.HereToSlay.card.Leader;
 import com.example.jeudecarte.HereToSlay.network.Client;
+import com.example.jeudecarte.HereToSlay.stack.LeaderStack;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -37,6 +40,8 @@ public class HubController implements Controller{
      */
     private final ArrayList<Player> playersList;
 
+    private final LeaderStack leaderDeck;
+
 
     //Constructors
 
@@ -54,6 +59,9 @@ public class HubController implements Controller{
             player.name = getValidName("");
             playersList.add(player);
         }
+
+        ArrayList<String> leaderList = getCategoryList(new String[]{"leader"});
+        leaderDeck = new LeaderStack(leaderList);
     }
 
 
@@ -167,6 +175,32 @@ public class HubController implements Controller{
         //inform everyone of the newcomer
         JSONObject newJson = generateJson("new player", player.convertJson(), "all");
         server.sendData(newJson);
+
+        checkHubFull();
+    }
+
+    /**
+     * Check if the hub is full and give everyone a leader if it is the case
+     */
+    private void checkHubFull(){
+        if (playersList.size() != Settings.playerNumber) return;
+
+        //if the hub is full
+
+        for (Player player : playersList){
+            Leader leaderCard = leaderDeck.draw();
+            player.leader = leaderCard;
+            try {
+                JSONObject json = new JSONObject();
+                json.put("name", player.name);
+                json.put("card", leaderCard.convertJson());
+
+                JSONObject json2 = generateJson("new leader", json, "player");
+                server.sendData(json2, player.uuid);
+            } catch (JSONException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     /**
