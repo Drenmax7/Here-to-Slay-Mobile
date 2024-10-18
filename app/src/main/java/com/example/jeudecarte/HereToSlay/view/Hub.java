@@ -11,9 +11,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.jeudecarte.HereToSlay.ZoomableImageView;
 import com.example.jeudecarte.HereToSlay.Settings;
 import com.example.jeudecarte.HereToSlay.board.Player;
 import com.example.jeudecarte.HereToSlay.card.Leader;
@@ -26,6 +26,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Locale;
 
 /**
@@ -93,6 +94,8 @@ public class Hub extends Activity implements View{
      */
     private String playerName = Settings.name;
 
+    private ArrayList<String> imageDescription;
+
 
     //Methods
 
@@ -119,8 +122,10 @@ public class Hub extends Activity implements View{
 
         setButtons();
         setLayoutWidth();
+        setZoom();
 
         playersList = new ArrayList<>();
+        imageDescription = new ArrayList<>(Arrays.asList("","",""));
         client.view = this;
     }
 
@@ -178,6 +183,21 @@ public class Hub extends Activity implements View{
                 updateScene();
             }
         });
+    }
+
+    /**
+     * Initialize the zoom functionality
+     */
+    private void setZoom(){
+        binding.zoom.setVisibility(INVISIBLE);
+
+        binding.heroImage1.setZoomText(binding.zoom);
+        binding.heroImage2.setZoomText(binding.zoom);
+        binding.heroImage3.setZoomText(binding.zoom);
+    }
+
+    private void editZoomText(){
+
     }
 
     /**
@@ -310,7 +330,7 @@ public class Hub extends Activity implements View{
             }
         }
 
-        updateScene();
+        runOnUiThread(this::updateScene);
     }
 
     /**
@@ -329,7 +349,7 @@ public class Hub extends Activity implements View{
 
             //get image view
             resID = getResources().getIdentifier("hero_image_"+(i+1), "id", getPackageName());
-            ImageView leaderImageView = findViewById(resID);
+            ZoomableImageView leaderImageView = findViewById(resID);
 
             //get reroll button
             resID = getResources().getIdentifier("reroll_button_"+(i+1), "id", getPackageName());
@@ -337,9 +357,11 @@ public class Hub extends Activity implements View{
 
             //if the slot is occupied or not
             if (currentPage * ROW_LENGTH + i < size) {
+                Player player = playersList.get(currentPage * ROW_LENGTH + i);
+
                 //update player name
                 pseudoTextView.setVisibility(VISIBLE);
-                String pseudo = playersList.get(currentPage * ROW_LENGTH + i).name;
+                String pseudo = player.name;
                 pseudoTextView.setText(pseudo);
 
                 if (pseudo.equals(playerName)){
@@ -351,7 +373,9 @@ public class Hub extends Activity implements View{
 
                 //update leader image
                 leaderImageView.setVisibility(VISIBLE);
-                leaderImageView.setImageDrawable(getDrawableByName("Leader Back"));
+                Leader leaderCard = player.leader;
+                leaderImageView.setImageDrawable(getDrawableByName(leaderCard.getName()));
+                leaderImageView.setDescription("description of the " + leaderCard.getName() + " card");
 
                 //update reroll button
                 rerollButton.setVisibility(VISIBLE);
