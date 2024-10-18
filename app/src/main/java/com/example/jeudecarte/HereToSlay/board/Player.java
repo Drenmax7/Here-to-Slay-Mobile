@@ -31,10 +31,11 @@ public class Player {
     //Constructor
 
     /**
-     * Basic constructor.
-     * Do not do anything special
+     * Initialize leader as a leader back
      */
-    public Player(){}
+    public Player(){
+        leader = new Leader("Leader Back");
+    }
 
     /**
      * Create a Player based on the json object information
