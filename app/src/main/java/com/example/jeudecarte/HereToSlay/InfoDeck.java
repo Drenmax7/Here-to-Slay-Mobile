@@ -1,6 +1,7 @@
 package com.example.jeudecarte.HereToSlay;
 
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
+import static com.example.jeudecarte.HereToSlay.Settings.checkExtensionActive;
 
 import android.content.res.AssetManager;
 import android.graphics.drawable.Drawable;
@@ -90,8 +91,6 @@ public class InfoDeck {
      * The method should be called before any use of getRandomName method
      */
     private static void setNameList(){
-        nameList = new ArrayList<>();
-
         //every folder containing interesting names
         String[] classes = new String[]{
                 "hero",
@@ -99,31 +98,7 @@ public class InfoDeck {
                 "monster"
         };
 
-        try {
-            //iterate trough all extension
-            Iterator<String> extensionIterator = infoDeck.keys();
-            while(extensionIterator.hasNext()) {
-                String extensionName = extensionIterator.next();
-                JSONObject extension = infoDeck.getJSONObject(extensionName);
-
-                //check if hero, leader and monster categories are present in extension
-                for (String categoryName : classes){
-                    if (extension.has(categoryName)) {
-                        JSONObject category = extension.getJSONObject(categoryName);
-                        Iterator<String> nameIterator = category.keys();
-
-                        //get all card name
-                        while (nameIterator.hasNext()) {
-                            String cardName = nameIterator.next();
-                            nameList.add(cardName);
-                        }
-                    }
-                }
-            }
-        }
-        catch (Exception exception){
-            throw new RuntimeException(exception);
-        }
+        nameList = getCategoryList(classes);
     }
 
     /**
@@ -192,5 +167,48 @@ public class InfoDeck {
      */
     public static Drawable getDrawableByName(String path){
         return imageList.get(path);
+    }
+
+    /**
+     * Return an array list containing the name of all the card inside the specified categories
+     * Only check cards inside of active extensions
+     *
+     * @param categories The list of the categories to get name from
+     *
+     * @return An array list containing all the names
+     */
+    public static ArrayList<String> getCategoryList(String[] categories){
+        ArrayList<String> cardsName = new ArrayList<>();
+
+        try {
+            //iterate trough all extension
+            Iterator<String> extensionIterator = infoDeck.keys();
+            while(extensionIterator.hasNext()) {
+                String extensionName = extensionIterator.next();
+                //if extension is not active don't look at the cards
+                if (!checkExtensionActive(extensionName)) continue;
+
+                JSONObject extension = infoDeck.getJSONObject(extensionName);
+
+                //check if hero, leader and monster categories are present in extension
+                for (String categoryName : categories){
+                    if (extension.has(categoryName)) {
+                        JSONObject category = extension.getJSONObject(categoryName);
+                        Iterator<String> nameIterator = category.keys();
+
+                        //get all card name
+                        while (nameIterator.hasNext()) {
+                            String cardName = nameIterator.next();
+                            cardsName.add(cardName);
+                        }
+                    }
+                }
+            }
+        }
+        catch (Exception exception){
+            throw new RuntimeException(exception);
+        }
+
+        return cardsName;
     }
 }
