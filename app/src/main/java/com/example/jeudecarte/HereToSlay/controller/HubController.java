@@ -1,7 +1,7 @@
 package com.example.jeudecarte.HereToSlay.controller;
 
 import static com.example.jeudecarte.HereToSlay.Utility.generateJson;
-import static com.example.jeudecarte.HereToSlay.Utility.getRandomName;
+import static com.example.jeudecarte.HereToSlay.InfoDeck.getRandomName;
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
 
 import android.util.Log;
@@ -48,6 +48,12 @@ public class HubController implements Controller{
     public HubController(Client server){
         this.server = server;
         playersList = new ArrayList<>();
+
+        for (int i = 0; i < 7; i++){
+            Player player = new Player();
+            player.name = getRandomName();
+            playersList.add(player);
+        }
     }
 
 
@@ -170,6 +176,8 @@ public class HubController implements Controller{
      * @return a unique name
      */
     private String getValidName(String name){
+        if (name.isEmpty()) return getRandomName();
+
         boolean valid = true;
         for (Player player : playersList){
             if (player.name.equals(name)) {

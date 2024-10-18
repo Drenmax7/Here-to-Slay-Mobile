@@ -30,5 +30,8 @@ class MainActivity : Activity() {
             startActivity(intent)
         }
 
+        //todo remove, used to automatically go to hts
+        binding.heretoslay.callOnClick()
+
     }
 }

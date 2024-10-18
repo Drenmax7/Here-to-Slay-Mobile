@@ -1,5 +1,5 @@
 {
-    "S": {
+    "special": {
         "back": {
             "Classes": {
                 "path": "back/S_1_Classes.png",
@@ -23,7 +23,7 @@
             }
         }
     },
-    "N": {
+    "normal": {
         "hero": {
             "Dodgy Dealer": {
                 "path": "bard/N_1_Dodgy Dealer.png",
@@ -1055,7 +1055,7 @@
             }
         }
     },
-    "BN": {
+    "berserkers and necromancers": {
         "hero": {
             "Annihilator": {
                 "path": "berserker/BN_1_Annihilator.png",
@@ -1366,7 +1366,7 @@
             }
         }
     },
-    "DS": {
+    "dragon sorcerer": {
         "challenge": {
             "Sorcerer Challenge": {
                 "path": "challenge/DS_1_Sorcerer Challenge.png",
@@ -1522,7 +1522,7 @@
             }
         }
     },
-    "WD": {
+    "warriors and druids": {
         "challenge": {
             "Druid Challenge": {
                 "path": "challenge/WD_1_Druid Challenge.png",
@@ -1636,6 +1636,96 @@
                 "class": "druid",
                 "item slot": 1,
                 "negative": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Agile Dagger": {
+                "path": "warrior/WD_1_Agile Dagger.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Blinding Blade": {
+                "path": "warrior/WD_1_Blinding Blade.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Critical Fang": {
+                "path": "warrior/WD_1_Critical Fang.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Hardened Hunter": {
+                "path": "warrior/WD_1_Hardened Hunter.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Looting Lupo": {
+                "path": "warrior/WD_1_Looting Lupo.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Nimble Gray": {
+                "path": "warrior/WD_1_Nimble Gray.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Silent Shield": {
+                "path": "warrior/WD_1_Silent Shield.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Tenacious Timber": {
+                "path": "warrior/WD_1_Tenacious Timber.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
+                    "roll": 7,
+                    "effect": []
+                }
+            },
+            "Wolfgang Pack": {
+                "path": "warrior/WD_1_Wolfgang Pack.png",
+                "number": 1,
+                "class": "warrior",
+                "item slot": 1,
+                "positive": {
                     "roll": 7,
                     "effect": []
                 }
@@ -1755,47 +1845,9 @@
                 "special": [],
                 "requiredClasses": []
             }
-        },
-        "warrior": {
-            "Agile Dagger": {
-                "path": "warrior/WD_1_Agile Dagger.png",
-                "number": 1
-            },
-            "Blinding Blade": {
-                "path": "warrior/WD_1_Blinding Blade.png",
-                "number": 1
-            },
-            "Critical Fang": {
-                "path": "warrior/WD_1_Critical Fang.png",
-                "number": 1
-            },
-            "Hardened Hunter": {
-                "path": "warrior/WD_1_Hardened Hunter.png",
-                "number": 1
-            },
-            "Looting Lupo": {
-                "path": "warrior/WD_1_Looting Lupo.png",
-                "number": 1
-            },
-            "Nimble Gray": {
-                "path": "warrior/WD_1_Nimble Gray.png",
-                "number": 1
-            },
-            "Silent Shield": {
-                "path": "warrior/WD_1_Silent Shield.png",
-                "number": 1
-            },
-            "Tenacious Timber": {
-                "path": "warrior/WD_1_Tenacious Timber.png",
-                "number": 1
-            },
-            "Wolfgang Pack": {
-                "path": "warrior/WD_1_Wolfgang Pack.png",
-                "number": 1
-            }
         }
     },
-    "HTS": {
+    "here to sleigh": {
         "hereToSleigh": {
             "Bag Of Holding Gifts": {
                 "path": "hereToSleigh/HTS_1_Bag Of Holding Gifts.png",
@@ -1947,7 +1999,7 @@
             }
         }
     },
-    "L": {
+    "leader": {
         "leader": {
             "The Brutal Bow": {
                 "path": "leader/L_1_The Brutal Bow.png",
@@ -1993,7 +2045,7 @@
             }
         }
     },
-    "M": {
+    "monster": {
         "monster": {
             "Ancient Megashark": {
                 "path": "monster/M_1_Ancient Megashark.png",

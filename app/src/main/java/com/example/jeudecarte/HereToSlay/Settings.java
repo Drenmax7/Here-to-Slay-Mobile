@@ -26,7 +26,8 @@ public class Settings {
     /**
      * Number of player in the game
      */
-    public static int playerNumber = 2;
+    //todo put back 4 as basic number
+    public static int playerNumber = 12;
 
     /**
      * Which game rule is used
@@ -107,7 +108,7 @@ public class Settings {
      * Reset all game parameters to their original state
      */
     public static void resetSettings(){
-        playerNumber = 2;
+        playerNumber = 4;
         gameRule = 0;
 
         warriorDruid = true;

@@ -1,6 +1,6 @@
 package com.example.jeudecarte.HereToSlay.view;
 
-import static com.example.jeudecarte.HereToSlay.Utility.getRandomName;
+import static com.example.jeudecarte.HereToSlay.InfoDeck.getRandomName;
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
 
 import android.app.Activity;

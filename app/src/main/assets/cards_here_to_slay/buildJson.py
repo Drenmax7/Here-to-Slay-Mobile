@@ -29,7 +29,7 @@ def renameImage():
             print(newName)
             os.rename(path,newName)
 
-extension = {
+extensionConversion = {
     "N" : "normal",
     "WD" : "warriors and druids",
     "BN" : "berserkers and necromancers",
@@ -56,7 +56,7 @@ for dossier in os.listdir():
         number = image.split("_")[1]
         name = image.split("_")[2].split(".png")[0]
 
-        extensionDic = data.get(extension,{})
+        extensionDic = data.get(extensionConversion[extension],{})
         
 
         imageDic = {
@@ -64,7 +64,7 @@ for dossier in os.listdir():
             "number" : int(number),
         }
 
-        if (dossier in ["bard","berserker","druid","fighter","guardian","necromancer","ranger","sorcerer","thief","warriror","wizard"]):
+        if (dossier in ["bard","berserker","druid","fighter","guardian","necromancer","ranger","sorcerer","thief","warrior","wizard"]):
             category = "hero"
             imageDic["class"] = dossier
             imageDic["item slot"] = 1
@@ -107,7 +107,7 @@ for dossier in os.listdir():
 
         categoryDic[name] = imageDic
         extensionDic[category] = categoryDic
-        data[extension] = extensionDic
+        data[extensionConversion[extension]] = extensionDic
 
 
 

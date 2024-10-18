@@ -9,7 +9,7 @@ import android.util.Log;
 import android.widget.EditText;
 
 import com.example.jeudecarte.HereToSlay.Settings;
-import com.example.jeudecarte.HereToSlay.Utility;
+import com.example.jeudecarte.HereToSlay.InfoDeck;
 import com.example.jeudecarte.HereToSlay.network.Client;
 import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.HereToSlayHomeBinding;
@@ -56,7 +56,7 @@ public class HereToSlay extends Activity {
         setContentView(binding.getRoot());
 
         //initialize a list with all heroes names
-        Utility.setNameList(getAssets());
+        InfoDeck.importInfoDeck(getAssets());
 
         getName();
         getLanguage();
@@ -66,6 +66,9 @@ public class HereToSlay extends Activity {
         setCreate();
         setLoad();
         setSelfParameter();
+
+        //todo remove, used to automatically go to create game
+        binding.createGame.callOnClick();
     }
 
     /**

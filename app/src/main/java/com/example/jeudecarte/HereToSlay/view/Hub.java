@@ -1,11 +1,16 @@
 package com.example.jeudecarte.HereToSlay.view;
 
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
 import static com.example.jeudecarte.HereToSlay.Utility.generateJson;
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.jeudecarte.HereToSlay.Settings;
@@ -19,6 +24,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * The view on which basic information on player waiting for the game will be displayed
@@ -26,6 +32,11 @@ import java.util.ArrayList;
  */
 public class Hub extends Activity implements View{
     //Attributes
+
+    /**
+     * How many player in a single page
+     */
+    private final int ROW_LENGTH = 3;
 
     /**
      * The tag showed in the logcat console
@@ -63,6 +74,11 @@ public class Hub extends Activity implements View{
      */
     public int port;
 
+    /**
+     * The page the player is currently looking at
+     */
+    private int currentPage = 0;
+
 
     //todo delete player that have been disconnected
     /**
@@ -99,8 +115,62 @@ public class Hub extends Activity implements View{
             startServer();
         }
 
+        setButtons();
+
         playersList = new ArrayList<>();
         client.view = this;
+
+
+        int width = getWindowManager().getDefaultDisplay().getWidth();
+        Log.d(TAG, "width : " + width);
+        //2400*1017
+        //2560*1536
+        ViewGroup.LayoutParams layoutParams = binding.slot1.getLayoutParams();
+        layoutParams.width = width/4;
+        binding.slot1.setLayoutParams(layoutParams);
+        binding.slot2.setLayoutParams(layoutParams);
+        binding.slot3.setLayoutParams(layoutParams);
+    }
+
+    /**
+     * Initialize the behavior of the left and right buttons
+     */
+    private void setButtons(){
+        binding.arrowLeft.setOnClickListener(v -> {
+            //if its not the first page, enable right button and change page
+            if (currentPage > 0) {
+                currentPage--;
+                binding.arrowRight.setVisibility(VISIBLE);
+                binding.arrowRightLayout.setBackgroundColor(0xFFFFFFFF);
+
+                //if its first page disable button
+                if (currentPage == 0) {
+                    binding.arrowLeft.setVisibility(INVISIBLE);
+                    binding.arrowLeftLayout.setBackgroundColor(0x00FFFFFF);
+                }
+
+                updateScene();
+            }
+        });
+
+        binding.arrowRight.setOnClickListener(v -> {
+            int lastPage = (playersList.size()-1)/ROW_LENGTH;
+
+            //if its not the last page, enable left button and change page
+            if (currentPage < lastPage) {
+                currentPage++;
+                binding.arrowLeft.setVisibility(VISIBLE);
+                binding.arrowLeftLayout.setBackgroundColor(0xFFFFFFFF);
+
+                //if its last page disable button
+                if (currentPage == lastPage) {
+                    binding.arrowRight.setVisibility(INVISIBLE);
+                    binding.arrowRightLayout.setBackgroundColor(0x00FFFFFF);
+                }
+
+                updateScene();
+            }
+        });
     }
 
     /**
@@ -212,7 +282,7 @@ public class Hub extends Activity implements View{
      * @param json the json object that act as a packet that the client received from the server
      */
     private void packetNewPlayer(JSONObject json) throws JSONException {
-        Log.d(TAG, "packet new player" + json);
+        Log.d(TAG, "packet new player");
         Player player = new Player(json.getJSONObject("value"));
         playersList.add(player);
         runOnUiThread(this::updateScene);
@@ -222,17 +292,52 @@ public class Hub extends Activity implements View{
      * Update the view such as it accurately represents current information
      */
     private void updateScene(){
-        int y = 0;
-        Log.d(TAG, Integer.toString(Settings.playerNumber));
-        for (Player player : playersList){
-            TextView textView = new TextView(binding.frontLayout.getContext());
-            textView.setText(player.name);
-            textView.setTextSize(18);
-            textView.setPadding(10, 10, 10, 10);
-            textView.setY(y);
-            textView.setBackgroundColor(0xFFFFFFFF);
-            y += 100;
-            binding.frontLayout.addView(textView);
+        //update player count
+        int size = playersList.size();
+        String text = String.format(Locale.FRANCE,"%d/%d",size,Settings.playerNumber);
+        binding.playerCount.setText(text);
+
+        for (int i = 0; i < ROW_LENGTH; i++){
+            //get player text field
+            int resID = getResources().getIdentifier("player_name_"+(i+1), "id", getPackageName());
+            TextView pseudoTextView = findViewById(resID);
+
+            //get image view
+            resID = getResources().getIdentifier("hero_image_"+(i+1), "id", getPackageName());
+            ImageView leaderImageView = findViewById(resID);
+
+            //get reroll button
+            resID = getResources().getIdentifier("reroll_button_"+(i+1), "id", getPackageName());
+            Button rerollButton = findViewById(resID);
+
+            //if the slot is occupied or not
+            if (currentPage * ROW_LENGTH + i < size) {
+                //update player name
+                pseudoTextView.setVisibility(VISIBLE);
+                String pseudo = playersList.get(currentPage * ROW_LENGTH + i).name;
+                pseudoTextView.setText(pseudo);
+
+                if (pseudo.equals(playerName)){
+                    pseudoTextView.setTextColor(0xFFFF0000);
+                }
+                else {
+                    pseudoTextView.setTextColor(0xFF000000);
+                }
+
+                //update leader image
+                leaderImageView.setVisibility(VISIBLE);
+
+                //update reroll button
+                rerollButton.setVisibility(VISIBLE);
+            }
+            else {
+                pseudoTextView.setVisibility(INVISIBLE);
+                leaderImageView.setVisibility(INVISIBLE);
+                rerollButton.setVisibility(INVISIBLE);
+            }
+
+
+
         }
     }
 
@@ -251,7 +356,8 @@ public class Hub extends Activity implements View{
         while (Hub.controllerClient.getPlayerUUID() == null) {continue;}
 
         //also create the client as it has not been by the previous activity
-        Hub.client = new Client("10.0.2.2",6666);
+        Hub.client = new Client("10.0.2.2", 6666);
         new Thread(Hub.client::connexion).start();
+
     }
 }

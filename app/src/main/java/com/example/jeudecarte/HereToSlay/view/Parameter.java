@@ -116,6 +116,10 @@ public class Parameter extends Activity {
         setSave();
         setReset();
         setMoreOption();
+
+
+        //todo remove, used to automatically go to hub
+        //binding.saveSettingsButton.callOnClick();
     }
 
     /**
