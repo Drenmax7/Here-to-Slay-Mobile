@@ -1,4 +1,8 @@
 package com.example.jeudecarte.HereToSlay.card;
 
-public interface Playable extends Card{
+public abstract class Playable extends Card{
+    public Playable(String name){
+        super(name);
+    }
+
 }

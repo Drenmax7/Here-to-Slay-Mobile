@@ -1,4 +1,7 @@
 package com.example.jeudecarte.HereToSlay.card;
 
-public class Leader implements Card{
+public class Leader extends Card{
+    public Leader(String name){
+        super(name);
+    }
 }

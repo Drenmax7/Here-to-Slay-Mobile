@@ -1,4 +1,7 @@
 package com.example.jeudecarte.HereToSlay.card;
 
-public class Modifier implements Anytime{
+public class Modifier extends Anytime {
+    public Modifier(String name){
+        super(name);
+    }
 }

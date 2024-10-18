@@ -1,4 +1,7 @@
 package com.example.jeudecarte.HereToSlay.card;
 
-public class Monster implements Card{
+public class Monster extends Card{
+    public Monster(String name) {
+        super(name);
+    }
 }

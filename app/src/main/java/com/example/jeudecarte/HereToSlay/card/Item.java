@@ -1,4 +1,7 @@
 package com.example.jeudecarte.HereToSlay.card;
 
-public interface Item extends Turn{
+public abstract class Item extends Turn{
+    public Item(String name) {
+        super(name);
+    }
 }

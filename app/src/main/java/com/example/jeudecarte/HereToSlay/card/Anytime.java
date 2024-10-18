@@ -1,4 +1,7 @@
 package com.example.jeudecarte.HereToSlay.card;
 
-public interface Anytime extends Playable{
+public abstract class Anytime extends Playable{
+    public Anytime(String name){
+        super(name);
+    }
 }
