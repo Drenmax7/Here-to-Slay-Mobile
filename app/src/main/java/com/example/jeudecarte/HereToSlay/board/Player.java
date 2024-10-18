@@ -18,7 +18,7 @@ public class Player {
     /**
      * The leader that the player have been assigned to
      */
-    public Integer leader = 0;
+    public String leader = "";
 
     /**
      * The unique UUID of the player, used by the server to identify each player
@@ -41,7 +41,7 @@ public class Player {
      */
     public Player(JSONObject json) throws JSONException {
         name = json.getString("name");
-        leader = json.getInt("leader");
+        leader = json.getString("leader");
         uuid = json.getString("uuid");
     }
 
