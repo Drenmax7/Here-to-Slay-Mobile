@@ -117,11 +117,16 @@ public class Hub extends Activity implements View{
         }
 
         setButtons();
+        setLayoutWidth();
 
         playersList = new ArrayList<>();
         client.view = this;
+    }
 
-
+    /**
+     * Set the width of the layout so the images are shown correctly
+     */
+    private void setLayoutWidth(){
         int width = getWindowManager().getDefaultDisplay().getWidth();
         Log.d(TAG, "width : " + width);
         //2400*1017
