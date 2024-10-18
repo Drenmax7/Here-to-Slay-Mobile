@@ -36,6 +36,18 @@ abstract class Card {
     }
 
 
+    //Getters
+
+    /**
+     * Return the name of the card
+     *
+     * @return the name of the card
+     */
+    public String getName() {
+        return name;
+    }
+
+
     //Methods
 
     /**
