@@ -182,4 +182,26 @@ public class Settings {
 
         forcedReroll = json.getInt("forcedReroll");
     }
+
+    public static boolean checkExtensionActive(String extensionName){
+        switch (extensionName){
+            case "normal":
+                return true;
+            case "warriors and druids":
+                return warriorDruid;
+            case "berserkers and necromancers":
+                return berserkerNecromancer;
+            case "dragon sorcerer":
+                return sorcerer;
+            case "here to sleigh":
+                return hereToSleigh;
+            case "leader":
+                return leader;
+            case "monster":
+                return monster;
+            default:
+                Exception exception = new Exception(extensionName + " is not a valid extension name");
+                throw new RuntimeException(exception);
+        }
+    }
 }
