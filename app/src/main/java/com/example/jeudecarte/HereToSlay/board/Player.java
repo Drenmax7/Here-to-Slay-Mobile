@@ -43,7 +43,10 @@ public class Player {
      */
     public Player(JSONObject json) throws JSONException {
         name = json.getString("name");
-        leader = json.getString("leader");
+
+        JSONObject leaderName = json.getJSONObject("leader");
+        leader = new Leader(leaderName);
+
         uuid = json.getString("uuid");
     }
 
@@ -58,7 +61,7 @@ public class Player {
     public JSONObject convertJson() throws JSONException {
         JSONObject json = new JSONObject();
         json.put("name",name);
-        json.put("leader",leader);
+        json.put("leader",leader.convertJson());
         json.put("uuid",uuid);
 
         return json;
