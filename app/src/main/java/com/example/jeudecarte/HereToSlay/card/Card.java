@@ -12,7 +12,7 @@ abstract class Card {
     /**
      * The name of the card
      */
-    String name;
+    private final String name;
 
 
     //Constructors
@@ -22,7 +22,7 @@ abstract class Card {
      *
      * @param name The name of the card
      */
-    Card(String name){
+    public Card(String name){
         this.name = name;
     }
 
@@ -31,7 +31,7 @@ abstract class Card {
      *
      * @param json The json object representing the card
      */
-    Card(JSONObject json) throws JSONException {
+    public Card(JSONObject json) throws JSONException {
         name = json.getString("name");
     }
 
