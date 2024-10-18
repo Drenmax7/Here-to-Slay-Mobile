@@ -87,7 +87,7 @@
                     <!-- Image du héros -->
                     <ImageView
                         android:id="@+id/hero_image_1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
                         android:layout_gravity="center" />
@@ -127,7 +127,7 @@
                     <!-- Image du héros -->
                     <ImageView
                         android:id="@+id/hero_image_2"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
                         android:layout_gravity="center" />
@@ -167,7 +167,7 @@
                     <!-- Image du héros -->
                     <ImageView
                         android:id="@+id/hero_image_3"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="2"
                         android:layout_gravity="center" />

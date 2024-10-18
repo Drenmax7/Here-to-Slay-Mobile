@@ -51,7 +51,7 @@ public class HubController implements Controller{
 
         for (int i = 0; i < 7; i++){
             Player player = new Player();
-            player.name = getRandomName();
+            player.name = getValidName("");
             playersList.add(player);
         }
     }
@@ -176,7 +176,7 @@ public class HubController implements Controller{
      * @return a unique name
      */
     private String getValidName(String name){
-        if (name.isEmpty()) return getRandomName();
+        if (name.isEmpty()) name = getRandomName();
 
         boolean valid = true;
         for (Player player : playersList){
@@ -188,7 +188,7 @@ public class HubController implements Controller{
 
         if (valid) return name;
         else{
-            name += getRandomName();
+            name = getRandomName();
             return getValidName(name);
         }
     }
