@@ -68,7 +68,7 @@ public class HereToSlay extends Activity {
         setSelfParameter();
 
         //todo remove, used to automatically go to create game
-        binding.createGame.callOnClick();
+        //binding.createGame.callOnClick();
     }
 
     /**
