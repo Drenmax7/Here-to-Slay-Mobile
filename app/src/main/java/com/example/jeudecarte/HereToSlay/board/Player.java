@@ -1,5 +1,7 @@
 package com.example.jeudecarte.HereToSlay.board;
 
+import com.example.jeudecarte.HereToSlay.card.Leader;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -16,9 +18,9 @@ public class Player {
     public String name = "";
 
     /**
-     * The leader that the player have been assigned to
+     * The leader that the player has been assigned to
      */
-    public String leader = "";
+    public Leader leader;
 
     /**
      * The unique UUID of the player, used by the server to identify each player
