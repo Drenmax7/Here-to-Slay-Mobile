@@ -1,7 +1,15 @@
 package com.example.jeudecarte.HereToSlay;
 
+import android.content.res.AssetManager;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
+import android.widget.ImageView;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * The purpose of this class is to contain useful functions that accomplish simple tasks

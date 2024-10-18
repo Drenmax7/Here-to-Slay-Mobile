@@ -2,6 +2,7 @@ package com.example.jeudecarte.HereToSlay.view;
 
 import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
+import static com.example.jeudecarte.HereToSlay.InfoDeck.getDrawableByName;
 import static com.example.jeudecarte.HereToSlay.Utility.generateJson;
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
 
@@ -326,6 +327,7 @@ public class Hub extends Activity implements View{
 
                 //update leader image
                 leaderImageView.setVisibility(VISIBLE);
+                leaderImageView.setImageDrawable(getDrawableByName("Leader Back"));
 
                 //update reroll button
                 rerollButton.setVisibility(VISIBLE);
@@ -335,9 +337,6 @@ public class Hub extends Activity implements View{
                 leaderImageView.setVisibility(INVISIBLE);
                 rerollButton.setVisibility(INVISIBLE);
             }
-
-
-
         }
     }
 
