@@ -54,7 +54,7 @@ public class HubController implements Controller{
         this.server = server;
         playersList = new ArrayList<>();
 
-        for (int i = 0; i < 7; i++){
+        for (int i = 0; i < 10; i++){
             Player player = new Player();
             player.name = getValidName("");
             playersList.add(player);
@@ -183,6 +183,7 @@ public class HubController implements Controller{
      * Check if the hub is full and give everyone a leader if it is the case
      */
     private void checkHubFull(){
+        Log.d(TAG, "check hub full");
         if (playersList.size() != Settings.playerNumber) return;
 
         //if the hub is full
@@ -190,13 +191,14 @@ public class HubController implements Controller{
         for (Player player : playersList){
             Leader leaderCard = leaderDeck.draw();
             player.leader = leaderCard;
+            Log.d(TAG, leaderCard.getName());
             try {
                 JSONObject json = new JSONObject();
                 json.put("name", player.name);
                 json.put("card", leaderCard.convertJson());
 
-                JSONObject json2 = generateJson("new leader", json, "player");
-                server.sendData(json2, player.uuid);
+                JSONObject json2 = generateJson("new leader", json, "all");
+                server.sendData(json2);
             } catch (JSONException e) {
                 throw new RuntimeException(e);
             }
