@@ -26,21 +26,21 @@
         <!-- Flèche gauche -->
         <LinearLayout
             android:id="@+id/arrow_left_layout"
-            android:layout_alignParentStart="true"
-            android:background="#ffffff"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_centerVertical="true">
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="#ffffff">
 
             <ImageButton
                 android:id="@+id/arrow_left"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_arrow_left"
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="Flèche gauche"
-                app:tint="@android:color/black"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_left"
+                app:tint="@android:color/black" />
 
         </LinearLayout>
 
@@ -48,14 +48,14 @@
             android:id="@+id/player_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3/12"
-            android:background="@color/white"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginTop="16dp" />
+            android:background="@color/white"
+            android:text="3/12"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
 
         <!-- Scrollable area for players -->
         <HorizontalScrollView
@@ -63,8 +63,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:layout_toEndOf="@id/arrow_left_layout"
             android:layout_toStartOf="@id/arrow_right_layout"
+            android:layout_toEndOf="@id/arrow_left_layout"
             android:fillViewport="true">
 
             <!-- LinearLayout containing the slots -->
@@ -72,47 +72,47 @@
                 android:id="@+id/player_container"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <!-- Slot 1 -->
                 <LinearLayout
                     android:id="@+id/slot_1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_margin="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <!-- Image du héros -->
-                    <ImageView
+                    <com.example.jeudecarte.HereToSlay.ZoomableImageView
                         android:id="@+id/hero_image_1"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:layout_weight="2" />
 
                     <!-- Pseudo du joueur -->
                     <TextView
                         android:id="@+id/player_name_1"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Joueur 1"
-                        android:textSize="16sp"
-                        android:gravity="center"
                         android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Joueur 1"
                         android:textColor="@android:color/black"
-                        android:layout_marginTop="8dp" />
+                        android:textSize="16sp" />
 
                     <!-- Bouton Reroll -->
                     <Button
                         android:id="@+id/reroll_button_1"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Reroll"
-                        android:layout_marginTop="8dp" />
+                        android:text="Reroll" />
                 </LinearLayout>
 
                 <!-- Slot 2 -->
@@ -120,39 +120,39 @@
                     android:id="@+id/slot_2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_margin="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <!-- Image du héros -->
-                    <ImageView
+                    <com.example.jeudecarte.HereToSlay.ZoomableImageView
                         android:id="@+id/hero_image_2"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:layout_weight="2" />
 
                     <!-- Pseudo du joueur -->
                     <TextView
                         android:id="@+id/player_name_2"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Joueur 2"
-                        android:textSize="16sp"
-                        android:gravity="center"
                         android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Joueur 2"
                         android:textColor="@android:color/black"
-                        android:layout_marginTop="8dp" />
+                        android:textSize="16sp" />
 
                     <!-- Bouton Reroll -->
                     <Button
                         android:id="@+id/reroll_button_2"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Reroll"
-                        android:layout_marginTop="8dp" />
+                        android:text="Reroll" />
                 </LinearLayout>
 
                 <!-- Slot 3 -->
@@ -160,39 +160,39 @@
                     android:id="@+id/slot_3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
                     android:layout_margin="16dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <!-- Image du héros -->
-                    <ImageView
+                    <com.example.jeudecarte.HereToSlay.ZoomableImageView
                         android:id="@+id/hero_image_3"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        android:layout_weight="2" />
 
                     <!-- Pseudo du joueur -->
                     <TextView
                         android:id="@+id/player_name_3"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Joueur 3"
-                        android:textSize="16sp"
-                        android:gravity="center"
                         android:background="@color/white"
+                        android:gravity="center"
+                        android:text="Joueur 3"
                         android:textColor="@android:color/black"
-                        android:layout_marginTop="8dp" />
+                        android:textSize="16sp" />
 
                     <!-- Bouton Reroll -->
                     <Button
                         android:id="@+id/reroll_button_3"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Reroll"
-                        android:layout_marginTop="8dp" />
+                        android:text="Reroll" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -201,25 +201,44 @@
         <!-- Flèche droite -->
         <LinearLayout
             android:id="@+id/arrow_right_layout"
-            android:layout_alignParentEnd="true"
-            android:background="#ffffff"
             android:layout_width="48dp"
             android:layout_height="48dp"
-            android:layout_centerVertical="true">
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="#ffffff">
 
             <ImageButton
                 android:id="@+id/arrow_right"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/ic_arrow_right"
                 android:background="?android:attr/selectableItemBackground"
                 android:contentDescription="Flèche droite"
-                app:tint="@android:color/black"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:src="@drawable/ic_arrow_right"
+                app:tint="@android:color/black" />
 
         </LinearLayout>
 
     </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/zoomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
