@@ -19,6 +19,8 @@ public class LeaderStack extends Stack<Leader>{
      * @param leaderList The list containing all names
      */
     public LeaderStack(ArrayList<String> leaderList){
+        cardsList = new ArrayList<>();
+
         for (String name : leaderList){
             Leader leader = new Leader(name);
             cardsList.add(leader);
