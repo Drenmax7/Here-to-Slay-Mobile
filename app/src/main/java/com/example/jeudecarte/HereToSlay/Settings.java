@@ -185,6 +185,7 @@ public class Settings {
 
     public static boolean checkExtensionActive(String extensionName){
         switch (extensionName){
+            case "special":
             case "normal":
                 return true;
             case "warriors and druids":
