@@ -24,7 +24,29 @@ abstract class Stack<Card> {
 
     //Methods
 
-    protected void shuffle(){
+    /**
+     * Shuffle the deck
+     */
+    public void shuffle(){
         Collections.shuffle(cardsList);
     }
+
+    /**
+     * Draw the first card of the deck
+     *
+     * @return the top card of the deck
+     */
+    public Card draw(){
+        return cardsList.remove(0);
+    }
+
+    /**
+     * Put the card to the bottom of the stack
+     *
+     * @param card The card to put to the bottom
+     */
+    public void add(Card card){
+        cardsList.add(card);
+    }
+
 }
