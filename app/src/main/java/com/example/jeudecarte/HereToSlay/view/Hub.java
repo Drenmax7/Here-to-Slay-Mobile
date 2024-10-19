@@ -4,6 +4,7 @@ import static android.view.View.INVISIBLE;
 import static android.view.View.VISIBLE;
 import static com.example.jeudecarte.HereToSlay.InfoDeck.getDrawableByName;
 import static com.example.jeudecarte.HereToSlay.Utility.generateJson;
+import static com.example.jeudecarte.HereToSlay.Utility.setLocale;
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
 
 import android.app.Activity;
@@ -12,6 +13,8 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 import com.example.jeudecarte.HereToSlay.ZoomableImageView;
 import com.example.jeudecarte.HereToSlay.Settings;
@@ -19,6 +22,7 @@ import com.example.jeudecarte.HereToSlay.board.Player;
 import com.example.jeudecarte.HereToSlay.card.Leader;
 import com.example.jeudecarte.HereToSlay.controller.HubController;
 import com.example.jeudecarte.HereToSlay.network.Client;
+import com.example.jeudecarte.R;
 import com.example.jeudecarte.databinding.HereToSlayHubBinding;
 
 import org.json.JSONArray;
@@ -94,8 +98,6 @@ public class Hub extends Activity implements View{
      */
     private String playerName = Settings.name;
 
-    private ArrayList<String> imageDescription;
-
 
     //Methods
 
@@ -111,6 +113,8 @@ public class Hub extends Activity implements View{
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setLocale(this, Settings.language);
+
         super.onCreate(savedInstanceState);
 
         binding = HereToSlayHubBinding.inflate(this.getLayoutInflater());
@@ -120,12 +124,12 @@ public class Hub extends Activity implements View{
             startServer();
         }
 
-        setButtons();
+        setArrows();
         setLayoutWidth();
         setZoom();
+        setReroll();
 
         playersList = new ArrayList<>();
-        imageDescription = new ArrayList<>(Arrays.asList("","",""));
         client.view = this;
     }
 
@@ -147,7 +151,7 @@ public class Hub extends Activity implements View{
     /**
      * Initialize the behavior of the left and right buttons
      */
-    private void setButtons(){
+    private void setArrows(){
         binding.arrowLeft.setOnClickListener(v -> {
             //if its not the first page, enable right button and change page
             if (currentPage > 0) {
@@ -196,8 +200,59 @@ public class Hub extends Activity implements View{
         binding.heroImage3.setZoomText(binding.zoom);
     }
 
-    private void editZoomText(){
+    /**
+     * Initialize the behavior of the reroll buttons
+     */
+    private void setReroll(){
+        //the controller must check the player still have reroll use
+        binding.rerollButton1.setOnClickListener(generateRerollFunction(0));
+        binding.rerollButton2.setOnClickListener(generateRerollFunction(1));
+        binding.rerollButton3.setOnClickListener(generateRerollFunction(2));
+    }
 
+    /**
+     * Generate an OnClickListener for the reroll buttons
+     *
+     * @param position The position of the reroll button
+     */
+    private OnClickListener generateRerollFunction(int position){
+        return v -> {
+            Log.d(TAG, "reroll button" + position);
+            Player player = getPlayerByName(playerName);
+            if (player == null) {
+                throw new RuntimeException(new Exception("player name : " + playerName + " is not valid"));
+            }
+
+            if (player.rerollLeft > 0){
+                player.rerollLeft--;
+
+                try {
+                    Player playerTarget = playersList.get(currentPage*ROW_LENGTH + position);
+                    JSONObject value = new JSONObject();
+                    value.put("from",playerName);
+                    value.put("to",playerTarget.name);
+                    JSONObject packet = generateJson("reroll leader", value, "server");
+                    new Thread(() -> client.sendData(packet)).start();
+
+                } catch (JSONException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        };
+    }
+
+    /**
+     * Return the player whose name is specified
+     *
+     * @param name The name of the player wanted
+     *
+     * @return The player whose name is specified
+     */
+    private Player getPlayerByName(String name){
+        for (Player player : playersList){
+            if (player.name.equals(name)) return player;
+        }
+        return null;
     }
 
     /**
@@ -318,16 +373,25 @@ public class Hub extends Activity implements View{
         runOnUiThread(this::updateScene);
     }
 
+    /**
+     * Extract the json object from the packet and change the leader card of the specified player
+     *
+     * @param json the json object that act as a packet that the client received from the server
+     */
     private void changeLeader(JSONObject json) throws JSONException{
         Log.d(TAG, "packet new leader");
 
         JSONObject value = json.getJSONObject("value");
         String name = value.getString("name");
 
-        for (Player player : playersList){
-            if (player.name.equals(name)){
-                player.leader = new Leader(value.getJSONObject("card"));
-            }
+        Player player = getPlayerByName(name);
+        if (player != null) player.leader = new Leader(value.getJSONObject("card"));
+
+        String from = value.getString("from");
+
+        if (!from.equals("server")) {
+            String text = from + getResources().getString(R.string.leader_change_message) + name;
+            runOnUiThread(() -> Toast.makeText(this, text, Toast.LENGTH_SHORT).show());
         }
 
         runOnUiThread(this::updateScene);
@@ -337,6 +401,11 @@ public class Hub extends Activity implements View{
      * Update the view such as it accurately represents current information
      */
     private void updateScene(){
+        Player playerUser = getPlayerByName(playerName);
+        if (playerUser == null) {
+            throw new RuntimeException(new Exception("player name : " + playerName + " is not valid"));
+        }
+        //todo split all that in multiple function
         //update player count
         int size = playersList.size();
         String text = String.format(Locale.FRANCE,"%d/%d",size,Settings.playerNumber);
@@ -379,6 +448,9 @@ public class Hub extends Activity implements View{
 
                 //update reroll button
                 rerollButton.setVisibility(VISIBLE);
+                if (playerUser.rerollLeft == 0){
+                    rerollButton.setEnabled(false);
+                }
             }
             else {
                 pseudoTextView.setVisibility(INVISIBLE);

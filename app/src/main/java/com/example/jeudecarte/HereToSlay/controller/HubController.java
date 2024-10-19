@@ -81,17 +81,20 @@ public class HubController implements Controller{
             if (!json.getString("target").equals("server")) return;
 
             switch (json.getString("name")) {
-                case("requested name"):
+                case "requested name":
                     packetRequestedName(json);
                     break;
-                case("name received"):
+                case "name received":
                     packetNameReceived(json);
                     break;
-                case("player list received"):
+                case "player list received":
                     packetPlayerListReceived(json);
                     break;
-                case("settings received"):
+                case "settings received":
                     packetSettingsReceived(json);
+                    break;
+                case "reroll leader":
+                    packetRerollLeader(json);
                     break;
 
                 default:
@@ -99,6 +102,9 @@ public class HubController implements Controller{
             }
         }
         catch (JSONException e) {
+            //todo change that from throw exception to print message
+            //one should not be able to make the server crash
+            //keep throw while developing
             throw new RuntimeException(e);
         }
     }
@@ -180,6 +186,61 @@ public class HubController implements Controller{
     }
 
     /**
+     * Check if the player that try to reroll someone leader has enough reroll left
+     * and reroll the specified player if it is the case.
+     *
+     * @param json the json object that act as a packet that the client received from the server
+     */
+    private void packetRerollLeader(JSONObject json) throws JSONException{
+        Log.d(TAG, "player reroll leader");
+
+        JSONObject operation = json.getJSONObject("value");
+
+        String nameFrom = operation.getString("from");
+        Player playerFrom = getPlayerByName(nameFrom);
+        if (playerFrom == null) {
+            Log.d(TAG, "the player that want to reroll a leader does not exist : " + nameFrom);
+            return;
+        }
+
+        String nameTarget = operation.getString("to");
+        Player playerTarget = getPlayerByName(nameTarget);
+        if (playerTarget == null) {
+            Log.d(TAG, "the player that should be rerolled does not exist : " + nameTarget);
+            return;
+        }
+
+        if (playerFrom.rerollLeft > 0) {
+            playerFrom.rerollLeft--;
+
+            leaderDeck.add(playerTarget.leader);
+            playerTarget.leader = leaderDeck.draw();
+
+            JSONObject value = new JSONObject();
+            value.put("from", nameFrom);
+            value.put("card", playerTarget.leader.convertJson());
+            value.put("name",nameTarget);
+
+            JSONObject result = generateJson("new leader", value, "all");
+            server.sendData(result);
+        }
+    }
+
+    /**
+     * Return the player whose name is specified
+     *
+     * @param name The name of the player wanted
+     *
+     * @return The player whose name is specified
+     */
+    private Player getPlayerByName(String name){
+        for (Player player : playersList){
+            if (player.name.equals(name)) return player;
+        }
+        return null;
+    }
+
+    /**
      * Check if the hub is full and give everyone a leader if it is the case
      */
     private void checkHubFull(){
@@ -196,6 +257,7 @@ public class HubController implements Controller{
                 JSONObject json = new JSONObject();
                 json.put("name", player.name);
                 json.put("card", leaderCard.convertJson());
+                json.put("from", "server");
 
                 JSONObject json2 = generateJson("new leader", json, "all");
                 server.sendData(json2);
