@@ -1,9 +1,13 @@
 package com.example.jeudecarte.HereToSlay.view;
 
+import static com.example.jeudecarte.HereToSlay.Utility.setLocale;
+
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -13,6 +17,10 @@ import com.example.jeudecarte.HereToSlay.InfoDeck;
 import com.example.jeudecarte.HereToSlay.network.Client;
 import com.example.jeudecarte.MainActivity;
 import com.example.jeudecarte.databinding.HereToSlayHomeBinding;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Locale;
 
 /**
  * First page of the Here To Slay game
@@ -50,6 +58,9 @@ public class HereToSlay extends Activity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //change local language to the one the user prefer
+        getLanguage();
+
         super.onCreate(savedInstanceState);
 
         binding = HereToSlayHomeBinding.inflate(this.getLayoutInflater());
@@ -59,9 +70,7 @@ public class HereToSlay extends Activity {
         InfoDeck.importInfoDeck(getAssets());
 
         getName();
-        getLanguage();
 
-        setReturn();
         setJoin();
         setCreate();
         setLoad();
@@ -76,11 +85,9 @@ public class HereToSlay extends Activity {
      */
     private void getLanguage(){
         SharedPreferences sharedPreferences = getSharedPreferences("HereToSlay", MODE_PRIVATE);
-        String language = sharedPreferences.getString("language", null);
-        if (language == null) {
-            language = "English";
-        }
+        Integer language = sharedPreferences.getInt("language", 0);
         Settings.language = language;
+        setLocale(this, language);
     }
 
     /**
@@ -93,16 +100,6 @@ public class HereToSlay extends Activity {
             name = "";
         }
         Settings.name = name;
-    }
-
-    /**
-     * Link the return function to the return button
-     */
-    private void setReturn(){
-        binding.retour.setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-        });
     }
 
     /**
