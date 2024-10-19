@@ -35,4 +35,5 @@
     <string name="your_name">Votre Nom :</string>
     <string name="language">Langue :</string>
     <string name="less_options">Moins d\'Options</string>
+    <string name="leader_change_message">" a changé le leader de "</string>
 </resources>
