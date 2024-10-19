@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.jeudecarte.HereToSlay.Settings;
+import com.example.jeudecarte.R;
 import com.example.jeudecarte.databinding.HereToSlayParameterBinding;
 
 /**
@@ -572,12 +573,12 @@ public class Parameter extends Activity {
         binding.moreOptionButton.setOnClickListener(v -> {
             if (moreOption) {
                 binding.advancedOption.setVisibility(View.GONE);
-                binding.moreOptionButton.setText("More Options");
+                binding.moreOptionButton.setText(getResources().getString(R.string.more_options));
                 moreOption = false;
             }
             else {
                 binding.advancedOption.setVisibility(View.VISIBLE);
-                binding.moreOptionButton.setText("Less Options");
+                binding.moreOptionButton.setText(getResources().getString(R.string.less_options));
                 moreOption = true;
             }
         });
