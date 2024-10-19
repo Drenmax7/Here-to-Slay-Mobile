@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/primary_text"
-            android:text="Number of Player"
+            android:text="@string/number_of_player"
             android:textSize="18sp"
             android:layout_marginBottom="8dp" />
 
@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Game Rule :"
+            android:text="@string/game_rule"
             android:textSize="16sp" />
 
         <Spinner
@@ -71,44 +71,44 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Expansions :"
+            android:text="@string/expansions"
             android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/warrios_druids"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Warriors &amp; Druids" />
+            android:text="@string/warriors_and_druids" />
 
         <CheckBox
             android:id="@+id/berserkers_necromancers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Berserkers &amp; Nécromancers" />
+            android:text="@string/berserkers_and_necromancers" />
 
         <CheckBox
             android:id="@+id/sorcerers"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dragon Sorcerer" />
+            android:text="@string/dragon_sorcerer" />
 
         <CheckBox
             android:id="@+id/monster"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monster Expansion" />
+            android:text="@string/monster_expansion" />
 
         <CheckBox
             android:id="@+id/leader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Leader Expansion" />
+            android:text="@string/leader_expansion" />
 
         <CheckBox
             android:id="@+id/here_to_sleigh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Here to Sleigh" />
+            android:text="@string/here_to_sleigh" />
 
             <!-- Conditions de victoire : Nombre de monstres tués -->
         <LinearLayout
@@ -124,14 +124,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Advenced Options:"
+                android:text="@string/advanced_options"
                 android:textSize="16sp" />
 
             <!-- Advanced Options : action point-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Action Point :" />
+                android:text="@string/action_point" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Card Limit :" />
+                android:text="@string/card_limit" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -195,13 +195,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Victory Conditions"
+                android:text="@string/victory_conditions"
                 android:textSize="16sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Monster Goal :" />
+                android:text="@string/monster_goal" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -233,7 +233,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hero Count :" />
+                android:text="@string/hero_count" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -265,7 +265,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Category Cap :" />
+                android:text="@string/category_cap" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -299,14 +299,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Hub"
+                android:text="@string/hub"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Forced Leader Reroll :" />
+                android:text="@string/forced_leader_reroll" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -349,7 +349,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
-                android:text="Save" />
+                android:text="@string/save" />
 
             <Button
                 android:id="@+id/resetButton"
@@ -357,7 +357,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:layout_weight="1"
-                android:text="Reset" />
+                android:text="@string/reset" />
         </LinearLayout>
 
         <Button
@@ -365,7 +365,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="More Options" />
+            android:text="@string/more_options" />
 
     </LinearLayout>
 </ScrollView>

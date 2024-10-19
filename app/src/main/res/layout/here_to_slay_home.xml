@@ -10,6 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/background"
         android:rotation="0"
         android:scaleType="fitXY"
         android:src="@drawable/table_background_90"
@@ -24,20 +25,6 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="-69dp">
-
-        <TextView
-            android:id="@+id/retour"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
-            android:fontFamily="sans-serif"
-            android:text="⬅️"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textColor="#444444"
-            android:textSize="34sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/parameter"
@@ -55,9 +42,9 @@
 
         <Button
             android:id="@+id/joinGame"
-            android:layout_width="400px"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Join Game"
+            android:text="@string/join_game"
             app:layout_constraintBottom_toTopOf="@+id/createGame"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
@@ -66,9 +53,9 @@
 
         <Button
             android:id="@+id/loadGame"
-            android:layout_width="400px"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Load Game"
+            android:text="@string/load_game"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.499"
@@ -77,9 +64,9 @@
 
         <Button
             android:id="@+id/createGame"
-            android:layout_width="400px"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Create Game"
+            android:text="@string/create_game"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.499"

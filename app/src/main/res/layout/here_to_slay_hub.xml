@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -10,6 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:adjustViewBounds="true"
+        android:contentDescription="@string/background"
         android:rotation="0"
         android:scaleType="fitXY"
         android:src="@drawable/table_background_90"
@@ -37,7 +37,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
-                android:contentDescription="Flèche gauche"
+                android:contentDescription="@string/left_arrow"
                 android:padding="8dp"
                 android:src="@drawable/ic_arrow_left"
                 app:tint="@android:color/black" />
@@ -84,7 +84,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <!-- Image du héros -->
+                    <!-- Hero image -->
                     <com.example.jeudecarte.HereToSlay.ZoomableImageView
                         android:id="@+id/hero_image_1"
                         android:layout_width="match_parent"
@@ -92,7 +92,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="2" />
 
-                    <!-- Pseudo du joueur -->
+                    <!-- Player pseudo -->
                     <TextView
                         android:id="@+id/player_name_1"
                         android:layout_width="wrap_content"
@@ -101,18 +101,18 @@
                         android:layout_weight="0.5"
                         android:background="@color/white"
                         android:gravity="center"
-                        android:text="Joueur 1"
+                        android:text="@string/player_1"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
-                    <!-- Bouton Reroll -->
+                    <!-- Reroll button -->
                     <Button
                         android:id="@+id/reroll_button_1"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Reroll" />
+                        android:text="@string/reroll" />
                 </LinearLayout>
 
                 <!-- Slot 2 -->
@@ -124,7 +124,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <!-- Image du héros -->
+                    <!-- Hero image -->
                     <com.example.jeudecarte.HereToSlay.ZoomableImageView
                         android:id="@+id/hero_image_2"
                         android:layout_width="match_parent"
@@ -132,7 +132,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="2" />
 
-                    <!-- Pseudo du joueur -->
+                    <!-- Player pseudo -->
                     <TextView
                         android:id="@+id/player_name_2"
                         android:layout_width="wrap_content"
@@ -141,18 +141,18 @@
                         android:layout_weight="0.5"
                         android:background="@color/white"
                         android:gravity="center"
-                        android:text="Joueur 2"
+                        android:text="@string/player_2"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
-                    <!-- Bouton Reroll -->
+                    <!-- Reroll button -->
                     <Button
                         android:id="@+id/reroll_button_2"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Reroll" />
+                        android:text="@string/reroll" />
                 </LinearLayout>
 
                 <!-- Slot 3 -->
@@ -164,7 +164,7 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <!-- Image du héros -->
+                    <!-- Hero image -->
                     <com.example.jeudecarte.HereToSlay.ZoomableImageView
                         android:id="@+id/hero_image_3"
                         android:layout_width="match_parent"
@@ -172,7 +172,7 @@
                         android:layout_gravity="center"
                         android:layout_weight="2" />
 
-                    <!-- Pseudo du joueur -->
+                    <!-- Player pseudo -->
                     <TextView
                         android:id="@+id/player_name_3"
                         android:layout_width="wrap_content"
@@ -181,18 +181,18 @@
                         android:layout_weight="0.5"
                         android:background="@color/white"
                         android:gravity="center"
-                        android:text="Joueur 3"
+                        android:text="@string/player_3"
                         android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
-                    <!-- Bouton Reroll -->
+                    <!-- Reroll button -->
                     <Button
                         android:id="@+id/reroll_button_3"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
                         android:layout_marginTop="8dp"
                         android:layout_weight="0.5"
-                        android:text="Reroll" />
+                        android:text="@string/reroll" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -212,7 +212,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="?android:attr/selectableItemBackground"
-                android:contentDescription="Flèche droite"
+                android:contentDescription="@string/right_arrow"
                 android:padding="8dp"
                 android:src="@drawable/ic_arrow_right"
                 app:tint="@android:color/black" />
@@ -230,7 +230,7 @@
             android:id="@+id/zoom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text=""
             android:background="@color/white"
             android:textColor="@color/black"
             android:textSize="16sp"

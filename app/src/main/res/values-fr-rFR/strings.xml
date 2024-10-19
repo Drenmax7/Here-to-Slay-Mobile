@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Here To Slay</string>
+    <string name="join_game">Rejoindre une Partie</string>
+    <string name="settings">Paramètres</string>
+    <string name="background">arrierre plan</string>
+    <string name="load_game">Charger une Partie</string>
+    <string name="create_game">Création d\'une Partie</string>
+    <string name="left_arrow">Fleche Gauche</string>
+    <string name="player_1">Joueur 1</string>
+    <string name="reroll">Relancer</string>
+    <string name="player_2">Joueur 2</string>
+    <string name="player_3">Joueur 3</string>
+    <string name="right_arrow">Fleche Gauche</string>
+    <string name="number_of_player">Nombre de Joueurs</string>
+    <string name="game_rule">Regle du Jeu :</string>
+    <string name="expansions">Extentions :</string>
+    <string name="warriors_and_druids"><![CDATA[Bretteurs & Druides]]></string>
+    <string name="berserkers_and_necromancers"><![CDATA[Berserkers & Necromancers]]></string>
+    <string name="dragon_sorcerer">Dragon Sorcier</string>
+    <string name="monster_expansion">Extention des Monstres</string>
+    <string name="leader_expansion">Extention des Meneurs</string>
+    <string name="advanced_options">Options Avancées :</string>
+    <string name="action_point">Points d\'Actions :</string>
+    <string name="card_limit">Limite de Cartes :</string>
+    <string name="victory_conditions">Conditions de Victoire</string>
+    <string name="monster_goal">Objectif de Monstre :</string>
+    <string name="hero_count">Nombre de Heros</string>
+    <string name="category_cap">Maximum par Categorie</string>
+    <string name="hub">Salon</string>
+    <string name="forced_leader_reroll">Relancement de Meneur Forcé</string>
+    <string name="save">Sauvegarder</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="more_options">Plus d\'Options</string>
+    <string name="your_name">Votre Nom :</string>
+    <string name="language">Langue :</string>
+    <string name="less_options">Moins d\'Options</string>
+</resources>

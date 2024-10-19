@@ -20,7 +20,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Settings"
+            android:text="@string/settings"
             android:textSize="24sp"
             android:textStyle="bold"
             android:textColor="@color/primary_text"
@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your Name:"
+            android:text="@string/your_name"
             android:textSize="18sp"
             android:textColor="@color/primary_text"
             android:layout_marginBottom="8dp"/>
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="4"
                 android:inputType="textPersonName"
-                android:text="Greedy Cheeks"
+                android:text=""
                 android:padding="12dp"
                 android:background="@drawable/edittext_background"
                 android:textColor="@color/primary_text"
@@ -72,7 +72,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="Language :"
+            android:text="@string/language"
             android:textSize="18sp"
             android:textColor="@color/primary_text" />
 
@@ -95,7 +95,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Save"
+                android:text="@string/save"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/button_color"
@@ -108,7 +108,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Reset"
+                android:text="@string/reset"
                 android:textSize="16sp"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/button_color"
