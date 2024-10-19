@@ -4,14 +4,18 @@ import static com.example.jeudecarte.HereToSlay.InfoDeck.getRandomName;
 import static com.example.jeudecarte.HereToSlay.view.HereToSlay.GENERIC;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 
 import com.example.jeudecarte.HereToSlay.Settings;
 import com.example.jeudecarte.databinding.HereToSlaySelfParameterBinding;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Locale;
 
 /**
  * List all personal parameters that can be changed and allow their modification
@@ -81,16 +85,26 @@ public class SelfParameter extends Activity {
     private void setSave(){
         binding.saveSettingsButton.setOnClickListener(v -> {
             Settings.name = binding.nameEditText.getText().toString();
-            Settings.language = binding.languageSpinner.getSelectedItem().toString();
+
+            int newLanguage = binding.languageSpinner.getSelectedItemPosition();
+            boolean changeLanguage = true;
+            if (Settings.language == newLanguage) changeLanguage = false;
+            Settings.language = newLanguage;
 
             SharedPreferences sharedPreferences = getSharedPreferences("HereToSlay", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("name", Settings.name);
-            editor.putString("language", Settings.language);
+            editor.putInt("language", Settings.language);
             editor.apply();
 
-            finish();
+            if (changeLanguage) restartApplication();
+            else finish();
         });
+    }
+
+    private void restartApplication() {
+        Intent intent = new Intent(getApplicationContext(), HereToSlay.class);
+        startActivity(intent);
     }
 
     /**
@@ -117,7 +131,6 @@ public class SelfParameter extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.languageSpinner.setAdapter(adapter);
 
-        int position = Arrays.asList(arraySpinner).indexOf(Settings.language);
-        binding.languageSpinner.setSelection(position);
+        binding.languageSpinner.setSelection(Settings.language);
     }
 }
