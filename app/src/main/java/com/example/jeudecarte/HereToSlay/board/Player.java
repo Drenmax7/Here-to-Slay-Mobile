@@ -1,5 +1,6 @@
 package com.example.jeudecarte.HereToSlay.board;
 
+import com.example.jeudecarte.HereToSlay.Settings;
 import com.example.jeudecarte.HereToSlay.card.Leader;
 
 import org.json.JSONException;
@@ -27,6 +28,11 @@ public class Player {
      */
     public String uuid = "";
 
+    /**
+     * The number of reroll that the player have left
+     */
+    public Integer rerollLeft;
+
 
     //Constructor
 
@@ -35,6 +41,7 @@ public class Player {
      */
     public Player(){
         leader = new Leader("Leader Back");
+        rerollLeft = Settings.forcedReroll;
     }
 
     /**
@@ -49,6 +56,8 @@ public class Player {
         leader = new Leader(leaderName);
 
         uuid = json.getString("uuid");
+
+        rerollLeft = Settings.forcedReroll;
     }
 
 
