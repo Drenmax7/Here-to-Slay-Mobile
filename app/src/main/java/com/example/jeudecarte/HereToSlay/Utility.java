@@ -1,6 +1,8 @@
 package com.example.jeudecarte.HereToSlay;
 
+import android.content.Context;
 import android.content.res.AssetManager;
+import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.widget.ImageView;
@@ -10,6 +12,9 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Locale;
 
 /**
  * The purpose of this class is to contain useful functions that accomplish simple tasks
@@ -35,5 +40,27 @@ public class Utility {
         json.put("target",target);
 
         return json;
+    }
+
+    /**
+     * Change local language
+     *
+     * @param context the activity to change the language of
+     * @param index the index of the language.
+     *              0 for english,
+     *              1 for french
+     */
+    public static void setLocale(Context context, Integer index) {
+        ArrayList<String> languageCode = new ArrayList<>(Arrays.asList(
+                "en", "fr"
+        ));
+
+        String langCode = languageCode.get(index);
+
+        Locale locale = new Locale(langCode);
+        Locale.setDefault(locale);
+        Configuration config = new Configuration();
+        config.locale = locale;
+        context.getResources().updateConfiguration(config, context.getResources().getDisplayMetrics());
     }
 }
