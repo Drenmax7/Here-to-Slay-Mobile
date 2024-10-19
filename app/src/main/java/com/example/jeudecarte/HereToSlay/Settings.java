@@ -18,7 +18,7 @@ public class Settings {
     /**
      * The preferred language of the player
      */
-    public static String language = "english";
+    public static Integer language = 0;
 
 
     //Game settings
